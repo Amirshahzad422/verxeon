@@ -100,15 +100,14 @@ export default function HomePage() {
                     <div id="center">
                         <div id="left">
                             <h3>
-                                Sundown is a multi-disciplinary studio focused on creating unique, end-to-end
-                                experiences and environments.
+                                The world's most ambitious businesses don't wait for the future they build it. Verxeon is the technology partner that makes that possible, through AI and software engineered for what's next
                             </h3>
                         </div>
                         <div id="right">
                             <h1>
-                                SPACES <br />
+                                SOFTWARE <br />
                                 THAT <br />
-                                INSPIRE
+                                THINKS
                             </h1>
                         </div>
                     </div>
@@ -117,7 +116,7 @@ export default function HomePage() {
                         <div id="hero-2"></div>
                         <div id="hero-3"></div>
                     </div>
-                    <video autoPlay loop muted src="/videos/video.mp4"></video>
+                    <video autoPlay loop muted src="/videos/video2.mp4"></video>
                 </div>
                 <div id="page2">
                     <div id="moving-text">
