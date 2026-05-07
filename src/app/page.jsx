@@ -147,8 +147,7 @@ export default function HomePage() {
                     </div>
                     <div id="page2-bottom">
                         <h1>
-                            We are a group of design- driven, goal-focused creators, producers, and designers who
-                            believe that the details make all the difference.
+                            Verxeon delivers intelligent software built to perform at the highest level.
                         </h1>
                         <div id="bottom-part2">
                             <img
@@ -156,9 +155,8 @@ export default function HomePage() {
                                 alt=""
                             />
                             <p>
-                                We love to create, we love to solve, we love to collaborate, and we love to turn
-                                amazing ideas into reality. We’re here to partner with you through every step of the
-                                process and know that relationships are the most important things we build.
+                                We don't just build software. We architect the competitive advantage that keeps our clients ahead through AI, automation,
+                                and technology that actually works at scale.
                             </p>
                         </div>
                     </div>
