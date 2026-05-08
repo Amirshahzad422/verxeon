@@ -3,10 +3,10 @@ import CustomScrollbar from "@/components/CustomScrollbar";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
 
 export const metadata = {
-  title: "Sundown Studio",
-  description: "Sundown Studio portfolio and experiences.",
+  title: "VerXeon technologies",
+  description: "Verxeon delivers intelligent software built to perform at the highest level.",
   icons: {
-    icon: "/images/icon.png",
+    icon: "/images/dot.png",
   },
 };
 
