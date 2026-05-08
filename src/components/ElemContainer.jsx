@@ -37,22 +37,44 @@ export default function ElemContainer({ items }) {
                         <div id="overlay"></div>
                         <div id="proj">
                             <h2>{item.title}</h2>
-                            <div>
-                                <h4>{item.client}</h4>
-                                <p>{item.type}</p>
-                            </div>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                            >
+                                <path
+                                    d="M7 17L17 7M17 7H7M17 7V17"
+                                    stroke="currentColor"
+                                    strokeWidth="1.5"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
                         </div>
                     </div>
                 ))}
-                
+
                 {items.map((item) => (
                     <div key={`mob-${item.id}`} id="mob-elem">
                         <img src={item.image} alt={item.title} />
                         <h2>{item.title}</h2>
-                        <div>
-                            <h4>{item.client}</h4>
-                            <p>{item.type}</p>
-                        </div>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                        >
+                            <path
+                                d="M7 17L17 7M17 7H7M17 7V17"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
                     </div>
                 ))}
             </div>

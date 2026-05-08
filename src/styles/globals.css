@@ -362,6 +362,17 @@ nav h3 {
 }
 
 
+.elem svg {
+    transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.elem:hover svg {
+    transform: translate(4px, -4px);
+}
+
+.elem:hover svg path {
+    stroke: white;
+}
 
 
 #navbut { display: flex; }
