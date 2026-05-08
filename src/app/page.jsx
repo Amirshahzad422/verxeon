@@ -59,36 +59,35 @@ const projectItems = [
 const swiperSlides = [
     {
         id: "slide1",
-        logo: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15ff_Nike.svg",
-        description: "Retained Production support across retail and events in NY, CHI, LA. Creative Design, Design Management, Production/Project Management, and execution of work from concept to installation across the Country.",
+        logo: "https://upinsurances.com/wp-content/webp-express/webp-images/uploads/2025/02/LOGO-2-1-1.png.webp",
+        description: "Delivered a full-scale AI automation platform reducing manual operations by 70%. Verxeon handled product strategy, UI/UX design, backend engineering, and deployment accelerating the client’s market launch timeline significantly.",
     },
-    {
+    {       
         id: "slide2",
-        logo: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1600_Converse.svg",
-        description: "Creative Concepting, Design, Design Management, Project Management, and execution of work from concept to installation across the Country. Cross functional communication and management of third party partners.",
+        logo: "https://lonestarcares.org/wp-content/themes/LSCCTX/images/header-logo.svg",
+        description: "Built a HIPAA-compliant AI support platform automating appointments, follow-ups, and insurance workflows. Verxeon managed architecture, AI integration, and deployment dramatically improving response speed and operational efficiency overall.",
     },
     {
         id: "slide3",
-        logo: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fd_Arc%E2%80%99teryx.svg",
-        description: "Production and design along with install oversight and execution support for the SoHo store opening on Broadway St, New York. Also working on creative and production work for a new store opening in Glendale, California.",
+        logo: "https://fencepost.co/wp-content/uploads/2025/03/FP-3.0-Logo.png",
+        description: "Created a custom AI chatbot and CRM automation platform streamlining customer support operations. Verxeon managed conversational design, backend integration, and deployment while improving efficiency and reducing repetitive support tasks.",
     },
     {
         id: "slide4",
-        logo: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b15fe_Hunter.svg",
-        description: "Design and Production partner for Hunter Holiday 2022 Pop-in at Nordstrom 57th St, New York, including activations in Women's, Men's and Kid's zones. Thirty-five (35) additional smaller take-downs in Nordstrom stores across the US. Concept design for Holiday boot customization events in stores across winter 2022.",
+        logo: "/images/logoEni.svg",
+        description: "Led a digital transformation initiative focused on ERP integration and enterprise automation systems. Verxeon delivered workflow optimization, analytics infrastructure, and cloud deployment improving visibility and operational performance.",
     },
     {
         id: "slide5",
-        logo: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1601_MediaLink.svg",
-        description: "Creative, Design, and Production Partner for 2023 CES. Scope Included creation of Branding Identity, Assets, and Digital Content, Design, Production design, Production oversight and Installation of client activations for IBM, Delta, Instacart, and more.",
+        logo: "https://commercial.allianz.com/content/dam/onemarketing/system/allianz-logo.svg",
+        description: "Delivered a scalable insurance operations platform supporting customer portals and policy management workflows. Verxeon managed product design, backend engineering, and mobile integration enhancing engagement and digital infrastructure value.",
     },
     {
         id: "slide6",
-        logo: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1602_AfterPay.svg",
-        description: "Creative, Design, and Production Partner for 2022 NY Fashion Week Pop-Up space. In Partnership with B-Reel scope including creation of Final Design, Design Assets, 3D Renders, Production design, Production/Partner oversight and creation of a two (2) story pop-up for Afterpay's clients such as Crocs, JD Sports, Container Store, & Revolve.",
+        logo: "https://uhy-us.com/media/h3gein5b/uhy_logo_full_color_registrationmark.svg",
+        description: "Built a machine learning forecasting engine integrated into enterprise supply chain infrastructure. Verxeon handled predictive modeling, analytics integration, and cloud deployment reducing operational costs and improving accuracy globally.",
     },
 ];
-
 export default function HomePage() {
     return (
         <>

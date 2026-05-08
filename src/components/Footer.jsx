@@ -5,7 +5,7 @@ export default function Footer() {
             <div id="shape2"></div>
             {/* <div id="shape3"></div> */}
             <div id="footerupper">
-                <div>
+                <div className="footer-info">
                     <h2>Work</h2>
                     <h2>Studio</h2>
                     <h2>Contact</h2>
@@ -17,10 +17,9 @@ export default function Footer() {
             </div>
             <div id="footerlower">
                 {/* <h1>Sundown</h1> */}
-            <img src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c6_Footer%20Logo.svg" alt="" />
-            
+                <img src="/verxeon.svg" alt="" />
                 
-                <div>
+                <div className="footer-info">
                     <h5>Copyright © Sundown Studio</h5>
                     <h5>Brooklyn, NY</h5>
                     <h5>Instagram</h5>

@@ -517,29 +517,38 @@ nav h3 {
     border-bottom: 1px solid rgba(211, 205, 193, 0.875);
     color: rgba(211, 205, 193, 0.875);
 }
-
 #footerlower {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding: 0px 1.5vw;
 }
 
-#footerlower div {
-    padding: 1vw 0px;
+#footerlower img {
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgb(80, 74, 69);
+    width: 100%;
+    margin-top: auto;
+    object-fit: contain;
+    display: block;
+}
+
+#footerlower .footer-info {
+    position: relative;
+    z-index: 3;
+    padding: 2vh 2vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2vw;
+    flex-wrap: wrap; /* Ensure text doesn't flow off-screen on smaller screens */
+    width: 100%;
 }
 
 #footerlower div h5 {
     font-size: 1.1vw;
     font-weight: 200;
-}
-
-#footerlower img {
-    margin-top: 5vw;
-    border-bottom: 1px solid rgb(80, 74, 69);
-    padding-bottom: 2vw;
-    width: 100%;
 }
 
 #footer #shape1 {
@@ -859,17 +868,14 @@ nav h3 {
 
   #footer p { font-size: 2.5vh; }
 
-  #email { display: flex; flex-direction: column; padding-top: 2vh; gap: 3vh; width: 90%; }
+  #email { display: flex; flex-direction: column; padding-top: 1vh; gap: 3vh; width: 90%; margin-bottom: 5vh; }
 
-  #email h6 { font-size: 2vh; font-weight: 200; padding-bottom: 1vh; border-bottom: 1px solid rgb(80, 74, 69); color: rgb(80, 74, 69); }
+  #email h6 { font-size: 2vh; font-weight: 200; padding-bottom: 1vh; border-bottom: 1px solid rgb(222, 217, 213); color: rgb(222, 217, 213); }
 
-  #footerlower { top: 38%; }
-
+  #footerlower { top: auto; bottom: 0; position: absolute; width: 100%; }
   #footerlower img { padding-bottom: 3vh; }
-
-  #footerlower div { padding: 3vw 2vw; display: flex; flex-wrap: wrap; gap: 1vh; align-items: center; justify-content: space-between; }
-
-  #footerlower div h5 { font-size: 2vh; }
+  #footerlower .footer-info { padding: 3vw 1vw; display: flex; flex-wrap: wrap; gap: 0.7vh; align-items: center; justify-content: space-between; }
+  #footerlower .footer-info h5 { font-size: 1.5vh; }
 
   #footer #shape1 { top: -5%; left: -2%; width: 100%; height: 81%; filter: blur(30px); }
 
@@ -900,9 +906,8 @@ nav h3 {
 
   #footer p { font-size: 2vw; }
 
-  #footerlower { top: 25%; }
-
-  #footerlower div h5 { font-size: 1.7vw; }
+  #footerlower { top: auto; bottom: 0; position: absolute; width: 100%; }
+  #footerlower .footer-info h5 { font-size: 1.7vw; }
 
   .swiper-slide img { display: inline-block; position: relative; object-fit: cover; width: 100%; }
   .swiper-slide p { width: 100%; color: rgba(42, 41, 41, 0.957); font-size: 2vh; }
@@ -923,11 +928,11 @@ nav h3 {
 
   #footer p { font-size: 2.4vw; }
 
-  #footerlower { top: 35%; }
+  #footerlower { top: auto; bottom: 0; position: absolute; width: 100%; }
 
-  #footerlower div { padding: 2vw 0px; }
+  #footerlower .footer-info { padding: 2vw 2vw; display: flex; justify-content: space-between; flex-wrap: wrap; }
 
-  #footerlower div h5 { font-size: 2.2vw; }
+  #footerlower .footer-info h5 { font-size: 2.2vw; }
 
   .swiper-slide img { display: inline-block; position: relative; object-fit: cover; width: 100%; }
   .swiper-slide p { width: 100%; color: rgba(42, 41, 41, 0.957); font-size: 2vh; }
