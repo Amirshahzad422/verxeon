@@ -19,9 +19,9 @@ export default function Loader() {
 
     return (
         <div id="loader" ref={loaderRef}>
-            <h1>ENVIRONMENTS</h1>
-            <h1>EXPERIENCES</h1>
-            <h1>CONTENT</h1>
+            <h1>VISION</h1>
+            <h1>GROWTH</h1>
+            <h1>EXECUTION</h1>
         </div>
     );
 }
