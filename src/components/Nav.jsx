@@ -13,7 +13,7 @@ export default function Nav() {
         <>
             <nav>
                 <img
-                    src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15c2_Sundown%20logo.svg"
+                    src="/verxeon-logo.png"
                     alt=""
                     style={{ opacity: open ? 0 : 1, transition: "opacity ease 0.2s" }}
                 />

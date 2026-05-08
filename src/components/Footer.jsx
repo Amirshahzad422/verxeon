@@ -20,7 +20,7 @@ export default function Footer() {
                 <img src="/verxeon.svg" alt="" />
                 
                 <div className="footer-info">
-                    <h5>Copyright © Sundown Studio</h5>
+                    <h5>Copyright © verXeon technologies</h5>
                     <h5>Brooklyn, NY</h5>
                     <h5>Instagram</h5>
                     <h5>LinkedIn</h5>
