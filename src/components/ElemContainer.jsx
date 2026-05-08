@@ -36,7 +36,31 @@ export default function ElemContainer({ items }) {
                     >
                         <div id="overlay"></div>
                         <div id="proj">
-                            <h2>{item.title}</h2>
+                            <div style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "flex-start",
+                                gap: "0px",
+                            }}>
+                                <h2 style={{ margin: 0 }}>{item.title}</h2>
+                                <p
+                                    className="desc"
+                                    style={{
+                                        maxHeight: 0,
+                                        overflow: "hidden",
+                                        opacity: 0,
+                                        fontSize: "12px",
+                                        fontWeight: "300",
+                                        color: "white",
+                                        maxWidth: "520px",
+                                        lineHeight: "1.6",
+                                        margin: 0,
+                                        transition: "max-height 0.4s ease, opacity 0.35s ease, margin 0.3s ease",
+                                    }}
+                                >
+                                    {item.desc}
+                                </p>
+                            </div>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="28"
@@ -60,6 +84,9 @@ export default function ElemContainer({ items }) {
                     <div key={`mob-${item.id}`} id="mob-elem">
                         <img src={item.image} alt={item.title} />
                         <h2>{item.title}</h2>
+                        <p style={{ fontSize: "13px", fontWeight: "300", color: "#555", marginTop: "4px" }}>
+                            {item.desc}
+                        </p>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="24"
