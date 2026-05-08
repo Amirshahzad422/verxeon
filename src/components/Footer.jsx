@@ -16,14 +16,59 @@ export default function Footer() {
                 </div>
             </div>
             <div id="footerlower">
-                {/* <h1>Sundown</h1> */}
                 <img src="/verxeon.svg" alt="" />
                 
                 <div className="footer-info">
                     <h5>Copyright © verXeon technologies</h5>
                     <h5>Brooklyn, NY</h5>
-                    <h5>Instagram</h5>
-                    <h5>LinkedIn</h5>
+
+                    <a
+                        className="social-link"
+                        href="https://www.instagram.com/Verxeon.ai/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h5>Instagram</h5>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                        >
+                            <path
+                                d="M7 17L17 7M17 7H7M17 7V17"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                    </a>
+
+                    <a
+                        className="social-link"
+                        href="https://www.linkedin.com/company/verxeon/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h5>LinkedIn</h5>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                        >
+                            <path
+                                d="M7 17L17 7M17 7H7M17 7V17"
+                                stroke="currentColor"
+                                strokeWidth="1.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>

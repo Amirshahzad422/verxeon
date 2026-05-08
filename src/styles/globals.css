@@ -584,6 +584,30 @@ nav h3 {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.social-link:hover {
+    opacity: 0.7;
+}
+
+.social-link h5 {
+    margin: 0;
+}
+
+/* Make sure links are clickable */
+#footerlower a {
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+}
 
 @keyframes shape1 {
     from {

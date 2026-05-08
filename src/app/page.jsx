@@ -158,7 +158,7 @@ export default function HomePage() {
                         </h1>
                         <div id="bottom-part2">
                             <img
-                                src="https://uploads-ssl.webflow.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg"
+                                src="/images/page2.jpg"
                                 alt=""
                             />
                             <p>
