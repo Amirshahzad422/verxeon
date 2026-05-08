@@ -4,44 +4,54 @@ import { useEffect } from "react";
 
 export default function ScrollbarManager() {
     useEffect(() => {
-        let timer = null;
+        let scrollTimeout = null;
+        let isScrolling = false;
+        const root = document.documentElement;
 
-        const addClasses = () => {
-            document.body.classList.add("is-scrolling");
-            document.documentElement.classList.add("is-scrolling");
+        const showScrollbar = () => {
+            root.classList.add("show-scrollbar");
         };
 
-        const removeClasses = () => {
-            document.body.classList.remove("is-scrolling");
-            document.documentElement.classList.remove("is-scrolling");
+        const hideScrollbar = () => {
+            root.classList.remove("show-scrollbar");
         };
 
         const onScroll = () => {
-            addClasses();
-            if (timer) {
-                window.clearTimeout(timer);
+            isScrolling = true;
+            showScrollbar();
+
+            if (scrollTimeout) {
+                window.clearTimeout(scrollTimeout);
             }
-            timer = window.setTimeout(() => {
-                removeClasses();
+
+            scrollTimeout = window.setTimeout(() => {
+                isScrolling = false;
+                hideScrollbar();
             }, 1000);
         };
 
+        const onMouseEnter = () => {
+            showScrollbar();
+        };
+
+        const onMouseLeave = () => {
+            if (!isScrolling) {
+                hideScrollbar();
+            }
+        };
+
         window.addEventListener("scroll", onScroll, { passive: true });
-        window.addEventListener("wheel", onScroll, { passive: true });
-        window.addEventListener("touchmove", onScroll, { passive: true });
-        window.addEventListener("keydown", onScroll, { passive: true });
-        window.addEventListener("app-scroll", onScroll, { passive: true });
+        root.addEventListener("mouseenter", onMouseEnter);
+        root.addEventListener("mouseleave", onMouseLeave);
 
         return () => {
             window.removeEventListener("scroll", onScroll);
-            window.removeEventListener("wheel", onScroll);
-            window.removeEventListener("touchmove", onScroll);
-            window.removeEventListener("keydown", onScroll);
-            window.removeEventListener("app-scroll", onScroll);
-            if (timer) {
-                window.clearTimeout(timer);
+            root.removeEventListener("mouseenter", onMouseEnter);
+            root.removeEventListener("mouseleave", onMouseLeave);
+            if (scrollTimeout) {
+                window.clearTimeout(scrollTimeout);
             }
-            removeClasses();
+            hideScrollbar();
         };
     }, []);
 

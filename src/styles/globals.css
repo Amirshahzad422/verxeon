@@ -17,12 +17,56 @@
     src: url(/fonts/NeueHaasDisplayRoman.ttf);
 }
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: neu;
 }
+
+/* HIDE NATIVE SCROLLBAR COMPLETELY */
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+/* CUSTOM SCROLL INDICATOR */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 4px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    z-index: 9999;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.scroll-indicator.visible {
+    opacity: 1;
+}
+
+/* Optional: Progress bar style at top */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
+
 
 html, body {
     height: 100%;

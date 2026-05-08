@@ -1,5 +1,5 @@
 import "./globals.css";
-import ScrollbarManager from "@/components/ScrollbarManager";
+import CustomScrollbar from "@/components/CustomScrollbar";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
-        <ScrollbarManager />
+        <CustomScrollbar />
       </body>
     </html>
   );

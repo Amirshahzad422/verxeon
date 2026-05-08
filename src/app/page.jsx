@@ -8,51 +8,58 @@ import TabSection from "@/components/TabSection";
 const projectItems = [
     {
         id: "elem1",
-        title: "Play New Kidvision",
-        client: "NIKE",
-        type: "Environment",
+        title: "Strategy",
+        client: "Advisory + Discovery + Market Research",
+        type: "01",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b169f_Copy%2520of%2520211023_NikeCHI_PlayNewKids_Beauty-03-p-1600.webp",
     },
     {
         id: "elem2",
-        title: "SOHO NYC",
-        client: "ARC'TERYX",
-        type: "Environment",
+        title: "Design",
+        client: "UI/UX + Branding + Design Systems",
+        type: "02",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b163b_Copy-of-IMG_1180.webp",
     },
     {
         id: "elem3",
-        title: "Makers Studio HOI",
-        client: "NIKE",
-        type: "Experiencal",
+        title: "Engineering",
+        client: "Web + Mobile + API + Cloud + DevOps",
+        type: "03",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1733_Nike_HOI_50th_SU22_FL1_5388.webp",
     },
     {
         id: "elem4",
-        title: "SOHO 2023",
-        client: "CONVERSE",
-        type: "Environment",
+        title: "AI & Data",
+        client: "AI Agents + ML + MLOps + Data Engineering",
+        type: "04",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1643_Copy%2520of%2520DSC04080-p-1600.webp",
     },
     {
         id: "elem5",
-        title: "NYFW Popup",
-        client: "AFTERPAY",
-        type: "Experiencal",
+        title: "Emerging Tech",
+        client: "AR/VR + IoT + Blockchain + RPA",
+        type: "05",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b1712_AM704009-p-1600.webp",
     },
     {
         id: "elem6",
-        title: "Air Force 1 2021",
-        client: "NIKE",
-        type: "Environment",
+        title: "Optimization",
+        client: "Audit + QA + Maintenance + Compliance",
+        type: "06",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16c5_Copy%20of%20Nike_Soho_AMD21_0781_LORES.webp",
     },
     {
         id: "elem7",
-        title: "50th Anniversary",
-        client: "NIKE",
-        type: "Environment",
+        title: "Growth",
+        client: "Marketing + SEO + CRO + Branding",
+        type: "07",
+        image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16f4_Copy%20of%20Nike_Soho_50th_SU22_FL1_6176.webp",
+    },
+    {
+        id: "elem8",
+        title: "Engagement",
+        client: "Dedicated Team + Staff Aug + ODC",
+        type: "08",
         image: "https://assets-global.website-files.com/64d3dd9edfb41666c35b15d4/64d3dd9edfb41666c35b16f4_Copy%20of%20Nike_Soho_50th_SU22_FL1_6176.webp",
     },
 ];
@@ -121,28 +128,37 @@ export default function HomePage() {
                 <div id="page2">
                     <div id="moving-text">
                         <div className="con">
-                            <h1>EXPERIENCES</h1>
+                            <h1>FASTER GROWTH</h1>
                             <div id="gola"></div>
-                            <h1>CONTENT</h1>
+                            <h1>SMARTER SYSTEMS</h1>
                             <div id="gola"></div>
-                            <h1>ENVIRONMENTS</h1>
+                            <h1>SCALABLE PRODUCTS</h1>
                             <div id="gola"></div>
+                            <h1>REAL RESULTS</h1>
+                            <div id="gola"></div>
+                            <h1>COMPETITIVE EDGE</h1>
                         </div>
                         <div className="con">
-                            <h1>EXPERIENCES</h1>
+                            <h1>FASTER GROWTH</h1>
                             <div id="gola"></div>
-                            <h1>CONTENT</h1>
+                            <h1>SMARTER SYSTEMS</h1>
                             <div id="gola"></div>
-                            <h1>ENVIRONMENTS</h1>
+                            <h1>SCALABLE PRODUCTS</h1>
                             <div id="gola"></div>
+                            <h1>REAL RESULTS</h1>
+                            <div id="gola"></div>
+                            <h1>COMPETITIVE EDGE</h1>
                         </div>
                         <div className="con">
-                            <h1>EXPERIENCES</h1>
+                            <h1>FASTER GROWTH</h1>
                             <div id="gola"></div>
-                            <h1>CONTENT</h1>
+                            <h1>SMARTER SYSTEMS</h1>
                             <div id="gola"></div>
-                            <h1>ENVIRONMENTS</h1>
+                            <h1>SCALABLE PRODUCTS</h1>
                             <div id="gola"></div>
+                            <h1>REAL RESULTS</h1>
+                            <div id="gola"></div>
+                            <h1>COMPETITIVE EDGE</h1>
                         </div>
                     </div>
                     <div id="page2-bottom">
@@ -165,12 +181,12 @@ export default function HomePage() {
                 <div id="page3">
                     <div id="sec">
                         <div id="gol"></div>
-                        <p>FEATURED PROJECTS</p>
+                        <p>Our Services</p>
                     </div>
                     <ElemContainer items={projectItems} />
                     <div id="but">
                         <div id="navbut">
-                            <h4><a href="#">All Projects -&gt;</a></h4>
+                            <h4><a href="#">VIEW ALL SERVICES -&gt;</a></h4>
                         </div>
                     </div>
                 </div>
