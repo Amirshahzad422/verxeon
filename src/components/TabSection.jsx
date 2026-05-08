@@ -4,22 +4,28 @@ import { useState } from "react";
 
 const tabsData = [
     {
-        id: "Design",
-        label: "Design",
+        id: "Discovery",
+        label: "Discovery",
         img: "/images/page4-1.webp",
-        desc: "Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings."
+        desc: "We start with your vision — what do you want to build, and how can we accelerate your growth to outpace the competition? We align on goals, map your challenges, and define a clear path forward through research, workshops, and technical feasibility."
     },
     {
-        id: "Project",
-        label: "Project",
+        id: "Kickoff",
+        label: "Kickoff",
         img: "/images/page4-2.webp",
-        desc: "Once a design is complete, our production team takes over to bring the vision to life. We manage vendors, fabricate custom elements, and ensure every detail meets our rigorous quality standards."
+        desc: "We align on strategy and set clear goals. Our team plans every step — timelines, responsibilities, tech stack, and delivery milestones — so expectations are crystal clear before a single line of code is written."
     },
     {
-        id: "Execution",
-        label: "Execution",
+        id: "Execute",
+        label: "Execute",
         img: "/images/page4-3.webp",
-        desc: "We manage the entire installation and execution process on-site. From logistics and scheduling to final styling, we ensure the project is delivered flawlessly and on time."
+        desc: "We bring your vision to life with precision and speed. From UI/UX design and AI integration to full-stack engineering and cloud deployment — every task is handled by experts using the best tools available."
+    },
+    {
+        id: "Deliver",
+        label: "Deliver",
+        img: "/images/page4-4.webp",
+        desc: "We present the final product — polished, tested, and ready for impact. Our focus is on quality, performance, and measurable results that drive the business growth you envisioned from day one."
     }
 ];
 
@@ -43,7 +49,11 @@ export default function TabSection() {
                 </div>
                 <div id="desc">{activeTab.desc}</div>
             </div>
-            <img id="page4-img" src={activeTab.img} alt={activeTab.label} />
+                <img
+                    id="page4-img"
+                    src={activeTab.img}
+                    alt={activeTab.label}
+                />
         </div>
     );
 }
