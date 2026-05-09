@@ -556,7 +556,7 @@
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    background-color: #1db954;
+    background-color: #095382;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -572,15 +572,15 @@
 
 .contact-cta__circle-arrow {
     font-size: 1.4rem;
-    color: #ffffff;
+    color: #efeae3;
     align-self: flex-end;
     line-height: 1;
 }
 
 .contact-cta__circle-label {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #efeae3;
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }

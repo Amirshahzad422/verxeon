@@ -24,7 +24,7 @@ export default function AboutPage() {
                         </p>
                         <div id="about-video-container">
                             <video 
-                                src="/videos/video.mp4" 
+                                src="/videos/about.mp4" 
                                 autoPlay 
                                 loop 
                                 muted 
@@ -109,7 +109,11 @@ export default function AboutPage() {
                     </section>
                     <section className="contact-cta">
                         <div className="contact-cta__cursor-circle" id="cta-cursor-circle">
-                            <span className="contact-cta__circle-arrow">↗</span>
+                            <span className="contact-cta__circle-arrow">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
+                            </span>
                             <span className="contact-cta__circle-label">LET'S TALK</span>
                         </div>
                         <div className="contact-cta__inner">
@@ -121,11 +125,11 @@ export default function AboutPage() {
                             <div className="contact-cta__info">
                                 <div className="contact-cta__info-group">
                                     <p className="contact-cta__info-label">LET'S CONNECT:</p>
-                                    <a href="#" className="contact-cta__deck-btn">CHECK OUR LATEST DECK</a>
+                                    <a href="" className="contact-cta__deck-btn">CHECK OUR Services</a>
                                 </div>
                                 <div className="contact-cta__info-group">
-                                    <p className="contact-cta__info-label">OUR LOCATION:</p>
-                                    <p className="contact-cta__address">1300 W El Camino Real<br/>#100, Mountain View,<br/>CA 94040</p>
+                                    <p className="contact-cta__info-label">OUR FOCUS:</p>
+                                    <p className="contact-cta__address">AI-Powered Software Development Agency<br/>Helping companies scale through technology</p>
                                 </div>
                             </div>
                         </div>
