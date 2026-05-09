@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import CircleCursorInit from "@/components/CircleCursorInit";
 import "./page.css";
 
 export const metadata = {
@@ -106,11 +107,35 @@ export default function AboutPage() {
                             </div>
                         </div>
                     </section>
+                    <section className="contact-cta">
+                        <div className="contact-cta__cursor-circle" id="cta-cursor-circle">
+                            <span className="contact-cta__circle-arrow">↗</span>
+                            <span className="contact-cta__circle-label">LET'S TALK</span>
+                        </div>
+                        <div className="contact-cta__inner">
+                            <div className="contact-cta__headline">
+                                <h2>Have a project in mind? Contact us!</h2>
+                            </div>
+                            {/* <!-- Column 2: Circle CTA (cursor-tracked) --> */}
+                             <div className="contact-cta__circle-wrap" id="cta-hover-zone"></div>
+                            <div className="contact-cta__info">
+                                <div className="contact-cta__info-group">
+                                    <p className="contact-cta__info-label">LET'S CONNECT:</p>
+                                    <a href="#" className="contact-cta__deck-btn">CHECK OUR LATEST DECK</a>
+                                </div>
+                                <div className="contact-cta__info-group">
+                                    <p className="contact-cta__info-label">OUR LOCATION:</p>
+                                    <p className="contact-cta__address">1300 W El Camino Real<br/>#100, Mountain View,<br/>CA 94040</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div className="space"></div>
                 </div>
                 <div id="page5"></div>
             </div>
+            <CircleCursorInit hoverZoneSelector=".contact-cta" cursorSelector="#cta-cursor-circle" />
             <Footer />
         </>
     );
 }
-
