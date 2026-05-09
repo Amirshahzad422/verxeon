@@ -25,11 +25,13 @@ export default function Nav() {
     return (
         <>
             <nav>
-                <img
-                    src="/verxeon-logo.png"
-                    alt=""
-                    style={{ transition: "opacity ease 0.2s" }}
-                />
+                <Link href="/">
+                    <img
+                        src="/verxeon-logo.png"
+                        alt="Verxeon"
+                        style={{ transition: "opacity ease 0.2s", cursor: "pointer" }}
+                    />
+                </Link>
                 <div id="nav-part2">
                     <h4>
                         <a href="#page3" onClick={(e) => smoothScrollTo("#page3", e)}>Services</a>
