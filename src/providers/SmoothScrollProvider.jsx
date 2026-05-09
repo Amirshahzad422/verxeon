@@ -14,11 +14,20 @@ export default function SmoothScrollProvider({ children }) {
                 smooth: true,
             });
 
-            const emitScroll = () => {
+            lenis.on("scroll", ({ scroll, limit }) => {
+                // Emit generic scroll event for other listeners (e.g. CustomScrollbar)
                 window.dispatchEvent(new Event("app-scroll"));
-            };
 
-            lenis.on("scroll", emitScroll);
+                // Use Lenis's real scroll values — window.scrollY stays 0 with Lenis,
+                // so the previous window.scroll listener never triggered.
+                // Disable pointer-events on #main when page5 (footer spacer) is in view
+                // so clicks pass through to the fixed footer beneath (z-index: -1).
+                const mainEl = document.getElementById("main");
+                if (!mainEl) return;
+                const innerHeight = window.innerHeight;
+                const atFooter = scroll >= limit - innerHeight;
+                mainEl.style.pointerEvents = atFooter ? "none" : "";
+            });
 
             const raf = (time) => {
                 lenis.raf(time);
@@ -37,6 +46,8 @@ export default function SmoothScrollProvider({ children }) {
             if (lenis && typeof lenis.destroy === "function") {
                 lenis.destroy();
             }
+            const mainEl = document.getElementById("main");
+            if (mainEl) mainEl.style.pointerEvents = "";
         };
     }, []);
 

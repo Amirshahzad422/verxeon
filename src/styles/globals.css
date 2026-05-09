@@ -477,6 +477,7 @@ nav h3 {
     height: 100vh;
     width: 100%;
     /* background-color: #EFEAE3; */
+    pointer-events: none;
 }
 
 #footer {
@@ -486,7 +487,7 @@ nav h3 {
     background-color: black;
     color: rgb(239, 234, 227);
     bottom: 0%;
-    z-index: -1;
+    z-index: 1;
 }
 
 #footerupper {
@@ -903,7 +904,7 @@ nav h3 {
   #footerlower { top: auto; bottom: 0; position: absolute; width: 100%; }
   #footerlower img { padding-bottom: 3vh; }
   #footerlower .footer-info { padding: 3vw 1vw; display: flex; flex-wrap: wrap; gap: 0.7vh; align-items: center; justify-content: space-between; }
-  #footerlower .footer-info h5 { font-size: 1.5vh; }
+  #footerlower .footer-info h5 { font-size: 1.2vh; }
 
   #footer #shape1 { top: -5%; left: -2%; width: 100%; height: 81%; filter: blur(30px); }
 
