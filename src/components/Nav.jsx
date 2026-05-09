@@ -28,7 +28,7 @@ export default function Nav() {
                 <img
                     src="/verxeon-logo.png"
                     alt=""
-                    style={{ opacity: open ? 0 : 1, transition: "opacity ease 0.2s" }}
+                    style={{ transition: "opacity ease 0.2s" }}
                 />
                 <div id="nav-part2">
                     <h4>
@@ -44,7 +44,11 @@ export default function Nav() {
                 <h3 onClick={toggle}>Menu</h3>
             </nav>
             <div id="full-scr" style={{ top: open ? "0" : "-100%" }}>
-                <div id="full-div1"></div>
+                <div id="full-div1">
+                    <h2><a href="/#page3" onClick={(e) => { smoothScrollTo("#page3", e); toggle(); }}>SERVICES</a></h2>
+                    <h2><Link href="/about" onClick={toggle}>ABOUT</Link></h2>
+                    <h2><a href="#" onClick={toggle}>CONTACT</a></h2>
+                </div>
             </div>
         </>
     );

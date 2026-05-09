@@ -654,9 +654,24 @@ nav h3 {
     background-color: #EFEAE3;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10vw 5vw;
 }
 
+#full-div1 h2 {
+    font-size: 10vw;
+    line-height: 15vw;
+    font-weight: 100;
+    margin-bottom: 2vw;
+}
+
+#full-div1 h2 a {
+    text-decoration: none;
+    color: #000000;
+}
 @media (max-width:600px) {
 
     #page1 {
@@ -683,11 +698,15 @@ nav h3 {
     nav h3 {
         display: block;
         padding: 3vw 5vw;
-        border: 1px solid #ababab;
+        border: 1px solid #000000;
         border-radius: 50px;
         font-size: 4vw;
         font-weight: 200;
         padding-left: 10vw;
+    }
+    
+    #nav-part2 h4{
+        color: #000000;
     }
 
     #center {
