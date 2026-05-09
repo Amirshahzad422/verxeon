@@ -14,6 +14,8 @@ export default function SmoothScrollProvider({ children }) {
                 smooth: true,
             });
 
+            window.lenis = lenis;
+
             lenis.on("scroll", ({ scroll, limit }) => {
                 // Emit generic scroll event for other listeners (e.g. CustomScrollbar)
                 window.dispatchEvent(new Event("app-scroll"));

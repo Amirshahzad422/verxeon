@@ -5,6 +5,18 @@ import { useState } from "react";
 export default function Nav() {
     const [open, setOpen] = useState(false);
 
+    const smoothScrollTo = (href, e) => {
+        if (!href || href === "#") return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (!target) return;
+        if (window.lenis) {
+            window.lenis.scrollTo(target, { duration: 1.4, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+        } else {
+            target.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     const toggle = () => {
         setOpen((prev) => !prev);
     };
@@ -19,10 +31,10 @@ export default function Nav() {
                 />
                 <div id="nav-part2">
                     <h4>
-                        <a href="#">Work</a>
+                        <a href="#page3" onClick={(e) => smoothScrollTo("#page3", e)}>Services</a>
                     </h4>
                     <h4>
-                        <a href="#">Studio</a>
+                        <a href="#">About</a>
                     </h4>
                     <h4>
                         <a href="#">Contact</a>

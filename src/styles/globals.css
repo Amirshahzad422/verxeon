@@ -511,16 +511,26 @@ nav h3 {
 #email {
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    /* gap: vw; */
     width: 26%;
 }
-
+#email p{
+    font-size: 1.2vw;
+    font-weight: 500;
+    padding-bottom: 0.5vw;
+    margin-bottom: 10px;
+    /* background-color:yellow; */
+    /* border-bottom: 1px solid rgba(211, 205, 193, 0.875); */
+    color: rgba(255, 255, 255, 0.875);
+}
 #email h6 {
     font-size: 1.2vw;
-    font-weight: 200;
+    font-weight: 500;
     padding-bottom: 0.5vw;
-    border-bottom: 1px solid rgba(211, 205, 193, 0.875);
-    color: rgba(211, 205, 193, 0.875);
+    margin-bottom: 10px;
+    /* background-color:red; */
+    /* border-bottom: 1px solid rgba(211, 205, 193, 0.875); */
+    color: rgba(255, 255, 255, 0.875);
 }
 #footerlower {
     position: absolute;
