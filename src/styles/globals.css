@@ -909,7 +909,7 @@ nav h3 {
 
   #email { display: flex; flex-direction: column; padding-top: 1vh; gap: 3vh; width: 90%; margin-bottom: 5vh; }
 
-  #email h6 { font-size: 2vh; font-weight: 200; padding-bottom: 1vh; border-bottom: 1px solid rgb(222, 217, 213); color: rgb(222, 217, 213); }
+  #email h6 { font-size: 2vh; font-weight: 200; padding-bottom: 1vh; color: rgb(222, 217, 213); }
 
   #footerlower { top: auto; bottom: 0; position: absolute; width: 100%; }
   #footerlower img { padding-bottom: 3vh; }
