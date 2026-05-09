@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 const linkStyle = {
     textDecoration: "none",
@@ -30,7 +31,7 @@ export default function Footer() {
                         <a href="#page3" style={linkStyle} onClick={(e) => smoothScrollTo("#page3", e)}>Services</a>
                     </h2>
                     <h2>
-                        <a href="#" style={linkStyle}>About</a>
+                        <Link href="/about" style={linkStyle}>About</Link>
                     </h2>
                     <h2>
                         <a href="#" style={linkStyle}>Contact</a>

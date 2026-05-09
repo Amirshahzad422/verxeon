@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Nav() {
     const [open, setOpen] = useState(false);
@@ -34,7 +35,7 @@ export default function Nav() {
                         <a href="#page3" onClick={(e) => smoothScrollTo("#page3", e)}>Services</a>
                     </h4>
                     <h4>
-                        <a href="#">About</a>
+                        <Link href="/about">About</Link>
                     </h4>
                     <h4>
                         <a href="#">Contact</a>
