@@ -17,17 +17,17 @@ export default function AboutPage() {
                     <section class="services">
                         <div className="box">
                             <div className="left">
-                                <img
+                                {/* <img
                                     src="/images/services/design.webp"
                                     alt="Workspace"
                                     id="img-left"
-                                />
+                                /> */}
                                 <h4>Services</h4>
                                 <h2>Let’s create your next big project together.</h2>
                             </div>
                             <div className="right">
                                 <img
-                                    src="/images/services/design.webp"
+                                    src="/images/services/strategy.webp"
                                     alt="Workspace"
                                     id="img-right"
                                 />
