@@ -3,6 +3,7 @@ export const servicesPages = {
         hero: {
             tag: "Design",
             heading: "Let's craft beautiful interfaces together.",
+            image: "/images/services/design.webp",
         },
         howWeWork: {
             tag: "How We Design",
@@ -27,6 +28,7 @@ export const servicesPages = {
         hero: {
             tag: "Development",
             heading: "Let's build scalable software together.",
+            image: "/images/services/engineering.webp",
         },
         howWeWork: {
             tag: "How We Build",
@@ -51,6 +53,7 @@ export const servicesPages = {
         hero: {
             tag: "Strategy",
             heading: "Let's define your path to success together.",
+            image: "/images/services/strategy.webp",
         },
         howWeWork: {
             tag: "How We Think",
@@ -74,6 +77,7 @@ export const servicesPages = {
         hero: {
             tag: "AI & Data",
             heading: "Let's build intelligent systems together.",
+            image: "/images/services/ai.webp",
         },
         howWeWork: {
             tag: "How We Innovate",
@@ -98,6 +102,7 @@ export const servicesPages = {
         hero: {
             tag: "Emerging Tech",
             heading: "Let's adopt the next wave of technology.",
+            image: "/images/services/emergingtech.webp",
         },
         howWeWork: {
             tag: "How We Explore",
@@ -122,6 +127,7 @@ export const servicesPages = {
         hero: {
             tag: "Optimization",
             heading: "Let's improve what you already have.",
+            image: "/images/services/optimization.webp",
         },
         howWeWork: {
             tag: "How We Optimize",
@@ -146,6 +152,7 @@ export const servicesPages = {
         hero: {
             tag: "Growth",
             heading: "Let's drive measurable business growth.",
+            image: "/images/services/growth.webp",
         },
         howWeWork: {
             tag: "How We Scale",
@@ -170,6 +177,7 @@ export const servicesPages = {
         hero: {
             tag: "Engagement",
             heading: "Let's build the perfect team for you.",
+            image: "/images/services/engagement.webp",
         },
         howWeWork: {
             tag: "How We Engage",

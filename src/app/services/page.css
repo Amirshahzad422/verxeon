@@ -581,7 +581,7 @@
 }
 
 /* Column 2 — Circle */
-/* .contact-cta__circle-wrap {
+.contact-cta__circle-wrap {
     position: relative;
     display: flex;
     justify-content: center;
@@ -589,10 +589,10 @@
     width: 100%;
     height: 100%;
     /* background-color: red; */
-    /* cursor: none; */
-/* } */
+    cursor: none;
+}
 
-/* .contact-cta__cursor-circle {
+.contact-cta__cursor-circle {
     position: absolute;
     width: 160px;
     height: 160px;
@@ -609,22 +609,22 @@
     pointer-events: none;
     top: 0;
     left: 0;
-} */
+}
 
-/* .contact-cta__circle-arrow {
+.contact-cta__circle-arrow {
     font-size: 1.4rem;
     color: #efeae3;
     align-self: flex-end;
     line-height: 1;
-} */
+}
 
-/* .contact-cta__circle-label {
+.contact-cta__circle-label {
     font-size: 1rem;
     font-weight: 700;
     color: #efeae3;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-} */
+}
 
 /* Column 3 — Info */
 .contact-cta__info {
