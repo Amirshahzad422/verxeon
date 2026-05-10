@@ -125,7 +125,7 @@ export default function AboutPage() {
                             <div className="contact-cta__info">
                                 <div className="contact-cta__info-group">
                                     <p className="contact-cta__info-label">LET'S CONNECT:</p>
-                                    <a href="" className="contact-cta__deck-btn">CHECK OUR Services</a>
+                                    <a href="/#page3" className="contact-cta__deck-btn">CHECK OUR Services</a>
                                 </div>
                                 <div className="contact-cta__info-group">
                                     <p className="contact-cta__info-label">OUR FOCUS:</p>

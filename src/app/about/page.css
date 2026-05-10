@@ -608,9 +608,9 @@
     text-transform: uppercase;
     margin: 0;
 }
-
 .contact-cta__deck-btn {
     display: inline-block;
+    width: fit-content; 
     padding: 8px 18px;
     border: 1px solid #000000;
     border-radius: 999px;
@@ -621,13 +621,31 @@
     text-decoration: none;
     text-transform: uppercase;
     background: transparent;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    width: fit-content;
+    cursor: pointer; /* 👈 fixes not clickable / pointer issue */
+    position: relative;
+    overflow: hidden; /* 👈 needed for fill animation */
+    z-index: 0;
+    transition: color 0.3s ease;
+}
+
+/* Fill layer that slides up on hover */
+.contact-cta__deck-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #000000;
+    transform: translateY(100%); /* starts hidden below */
+    transition: transform 0.3s ease;
+    z-index: -1;
+    border-radius: 999px;
+}
+
+.contact-cta__deck-btn:hover::before {
+    transform: translateY(0); /* slides up to fill */
 }
 
 .contact-cta__deck-btn:hover {
-    background-color: #ffffff;
-    color: #111111;
+    color: #ffffff;
 }
 
 .contact-cta__address {
