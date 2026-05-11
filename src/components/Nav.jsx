@@ -34,7 +34,7 @@ export default function Nav() {
                 </Link>
                 <div id="nav-part2">
                     <h4>
-                        <a href="#page3" onClick={(e) => smoothScrollTo("#page3", e)}>Services</a>
+                        <Link href="/services">Services</Link>
                     </h4>
                     <h4>
                         <Link href="/about">About</Link>
@@ -47,7 +47,7 @@ export default function Nav() {
             </nav>
             <div id="full-scr" style={{ top: open ? "0" : "-100%" }}>
                 <div id="full-div1">
-                    <h2><a href="/#page3" onClick={(e) => { smoothScrollTo("#page3", e); toggle(); }}>SERVICES</a></h2>
+                    <h2><Link href="/services" onClick={toggle}>SERVICES</Link></h2>
                     <h2><Link href="/about" onClick={toggle}>ABOUT</Link></h2>
                     <h2><a href="#" onClick={toggle}>CONTACT</a></h2>
                 </div>

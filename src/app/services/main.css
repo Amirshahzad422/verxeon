@@ -1,0 +1,879 @@
+/* about/page.css — scoped styles for the About page */
+
+/* Let the gooey show and let the page flow naturally */
+#page1 {
+    overflow: visible;
+}
+
+/* WHAT WE DO BEST SECTION */
+.whatwedo-section {
+    width: 90%;
+    margin: 3vw 4.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    animation: fadeSlideUp 0.8s ease both;
+    position: relative;
+    z-index: 0;
+}
+
+/* Header */
+.whatwedo-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    animation: fadeSlideUp 0.8s ease 0.1s both;
+}
+
+.whatwedo-header h2 {
+    font-size: clamp(28px, 4.5vw, 62px);
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.whatwedo-header p {
+    font-size: clamp(13px, 1.1vw, 16px);
+    color: #000000;
+    margin: 0;
+    line-height: 1.6;
+    max-width: 380px;
+}
+
+/* Body: list + image side by side */
+.whatwedo-body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4vw;
+    animation: fadeSlideUp 0.8s ease 0.2s both;
+    padding-right: 7vw;
+    padding-left: 7vw;
+    /* background-color: red; */
+}
+
+/* LEFT — service list */
+.whatwedo-list {
+    margin-top: 3vw;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+.whatwedo-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 0;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    animation: fadeSlideUp 0.6s ease both;
+}
+
+.whatwedo-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    transform-origin: left;
+    animation: flowBorder 1s ease both;
+    animation-delay: calc(var(--item-delay, 0s) + 0.1s);
+}
+
+.whatwedo-item:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+    transform-origin: left;
+    animation: flowBorder 1s ease both;
+    animation-delay: calc(var(--item-delay, 0s) + 0.1s);
+}
+
+@keyframes flowBorder {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/* stagger items */
+.whatwedo-item:nth-child(1) {
+    --item-delay: 0.25s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(2) {
+    --item-delay: 0.35s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(3) {
+    --item-delay: 0.45s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(4) {
+    --item-delay: 0.55s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(5) {
+    --item-delay: 0.65s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(6) {
+    --item-delay: 0.75s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(7) {
+    --item-delay: 0.85s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:nth-child(8) {
+    --item-delay: 0.95s;
+    animation-delay: var(--item-delay);
+}
+
+.whatwedo-item:not(.active) {
+    opacity: 0.45;
+}
+
+.whatwedo-item:hover {
+    opacity: 1;
+}
+
+.whatwedo-item h3 {
+    font-size: clamp(20px, 2.4vw, 34px);
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Tags row — only visible on active item */
+.whatwedo-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.whatwedo-tags span {
+    font-size: 11px;
+    color: #000000;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+/* Item row: title+tags on left, arrow on right */
+.whatwedo-item-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Arrow */
+.whatwedo-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translate(-6px, 6px) rotate(45deg);
+    /* starts bottom-left */
+    transition: opacity 0.25s ease, transform 0.6s ease;
+    color: #000000;
+    flex-shrink: 0;
+}
+
+/* On hover: arrow slides to top-right and becomes visible */
+.whatwedo-item.active .whatwedo-arrow {
+    opacity: 1;
+    transform: translate(0px, 0px) rotate(0deg);
+}
+
+/* Tags separator */
+.tag-sep {
+    color: #999;
+}
+
+/* RIGHT — image */
+/* Image switcher — all images stacked, only active visible */
+.whatwedo-image {
+    position: sticky;
+    top: 10vh;
+    width: 38%;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    animation: fadeIn 0.9s ease 0.3s both;
+}
+
+.whatwedo-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.whatwedo-image img.visible {
+    opacity: 1;
+}
+
+#about-gooey {
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #095382, #0a6b9b);
+    top: 45%;
+    left: 32%;
+    filter: blur(30px);
+    z-index: -1;
+    animation-name: gooey;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .whatwedo-body {
+        gap: 3vw;
+    }
+
+    .whatwedo-image {
+        width: 42%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    #about-gooey {
+        display: none;
+    }
+
+    .whatwedo-section {
+        width: 92%;
+        margin: 10vw auto;
+        gap: 32px;
+    }
+
+    .whatwedo-body {
+        flex-direction: column;
+    }
+
+    .whatwedo-image {
+        display: none;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        border-radius: 10px;
+        order: 2;
+        /* 👈 image goes BELOW the list */
+    }
+
+    .whatwedo-arrow {
+        opacity: 1;
+        /* always show on mobile */
+        transform: none;
+    }
+
+    .whatwedo-list {
+        width: 100%;
+        order: 1;
+        /* 👈 list stays ON TOP */
+    }
+
+    .whatwedo-item h3 {
+        font-size: clamp(18px, 5.5vw, 26px);
+    }
+
+    /* hide image on mobile entirely — matches your screenshot where image is cut off */
+    /* .whatwedo-image { display: none; } */
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .whatwedo-section {
+        width: 94%;
+        gap: 24px;
+    }
+
+    .whatwedo-item {
+        padding: 18px 0;
+    }
+}
+
+
+/* SERVICE DETAIL SECTION */
+.service-detail-section {
+    width: 80%;
+    margin-right: 12vw;
+    margin-left: 11vw;
+    margin-top: 7vw;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    box-sizing: border-box;
+}
+
+/* TOP ROW — title left, list right */
+.service-detail-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 6vw;
+}
+
+.service-detail-title {
+    flex: 1;
+}
+
+.service-detail-title h2 {
+    font-size: clamp(36px, 5.5vw, 72px);
+    font-weight: 500;
+    color: #000000;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.service-detail-title h2 span {
+    color: #000000;
+}
+
+/* Right list */
+.service-detail-right {
+    width: 45%;
+    flex-shrink: 0;
+    margin-top: 12px;
+    padding-right: 8vw;
+    /* background-color: yellow; */
+}
+
+.service-detail-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-detail-list li {
+    position: relative;
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-weight: 400;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.service-detail-list li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #333333;
+    transform-origin: left;
+    /* Scroll-triggered flow */
+    animation: flowBorder ease-out both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 40%;
+}
+
+.service-detail-list li:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #333333;
+    transform-origin: left;
+    /* Scroll-triggered flow */
+    animation: flowBorder ease-out both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 40%;
+}
+
+/* MID ROW — description paragraph */
+.service-detail-mid {
+    display: flex;
+    flex-direction: row;
+    margin-top: -3vw;
+    /* background-color: red; */
+}
+
+.service-detail-desc {
+    width: 45%;
+    margin-left: 0;
+}
+
+.service-detail-desc p {
+    font-size: clamp(14px, 1.1vw, 17px);
+    font-weight: 300;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+}
+
+/* IMAGES ROW */
+.service-detail-images {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 0.3vw;
+    padding-right: 7vw;
+    /* background-color: RED; */
+
+}
+
+.service-detail-img {
+    overflow: hidden;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+}
+
+/* Large first image takes more space */
+.service-detail-img.large {
+    flex: 2;
+    aspect-ratio: 2 / 1;
+}
+
+.service-detail-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* 
+.service-detail-img:hover img {
+    transform: scale(1.04);
+} */
+
+/* BOTTOM DIVIDER */
+.service-detail-divider {
+    width: calc(100% - 6vw);
+    height: 1px;
+    background-color: #333333;
+    /* margin-top: 0.1vw; */
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .service-detail-desc {
+        width: 60%;
+    }
+
+    .service-detail-right {
+        width: 50%;
+    }
+}
+
+/* MOBILE — single column */
+@media (max-width: 768px) {
+    .service-detail-section {
+        width: 80%;
+        margin: 2vw 4vw 10vw 4vw;
+        margin-left: 10vw;
+        padding: 0;
+        gap: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Flatten rows so we can reorder children directly */
+    .service-detail-top,
+    .service-detail-mid {
+        display: contents;
+    }
+
+    .service-detail-title {
+        order: 1;
+    }
+
+    .service-detail-desc {
+        order: 2;
+        width: 100%;
+    }
+
+    .service-detail-right {
+        order: 3;
+        width: 100%;
+        margin-top: 0;
+        padding-right: 0;
+    }
+
+    /* MOBILE LIST BORDER ANIMATION */
+    .service-detail-list li {
+        position: relative;
+        border-bottom: none;
+    }
+
+    .service-detail-list li:first-child {
+        border-top: none;
+    }
+
+    .service-detail-list li::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #333333;
+        transform-origin: left;
+        /* Scroll-triggered flow */
+        animation: flowBorder ease-out both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 40%;
+    }
+
+    .service-detail-list li:first-child::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #333333;
+        transform-origin: left;
+        /* Scroll-triggered flow */
+        animation: flowBorder ease-out both;
+        animation-timeline: view();
+        animation-range: entry 5% cover 40%;
+    }
+
+    .service-detail-images {
+        order: 4;
+        flex-direction: column;
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    .service-detail-divider {
+        order: 5;
+        width: 100%;
+    }
+
+    .service-detail-img,
+    .service-detail-img.large {
+        flex: unset;
+        width: 100%;
+        aspect-ratio: auto;
+        /* Scroll-triggered wipe reveal from top to bottom */
+        animation: wipeDownRevealMobile 1s ease-out both;
+        animation-timeline: view();
+    }
+
+    /* Extended scroll entry ranges for a much smoother, slower wipe */
+    .service-detail-img:nth-child(1) {
+        animation-range: entry 5% cover 55%;
+    }
+
+    .service-detail-img:nth-child(2) {
+        animation-range: entry 10% cover 60%;
+    }
+
+    .service-detail-img:nth-child(3) {
+        animation-range: entry 15% cover 65%;
+    }
+
+    .service-detail-img img {
+        min-height: 240px;
+    }
+
+    .service-detail-title h2 {
+        font-size: clamp(32px, 9vw, 48px);
+    }
+}
+
+@keyframes wipeDownRevealMobile {
+    0% {
+        clip-path: inset(0 0 100% 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .service-detail-section {
+        gap: 24px;
+    }
+
+    .service-detail-img img {
+        min-height: 200px;
+    }
+}
+
+/* ── CONTACT CTA SECTION ── */
+.contact-cta {
+    /* background-color: red; */
+    border: 1px solid #2e2e2e;
+    border-radius: 60px;
+    /* border-top: 1px solid #2e2e2e;
+  border-bottom: 1px solid #2e2e2e; */
+    margin: 2vw 4.5vw;
+    width: 90%;
+}
+
+.contact-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 60px;
+}
+
+/* Column 1 — Headline */
+.contact-cta__headline h2 {
+    /* background-color: blue; */
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 900;
+    color: #000000;
+    line-height: 1.05;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+/* Column 2 — Circle */
+.contact-cta__circle-wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    cursor: none;
+}
+
+.contact-cta__cursor-circle {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #095382;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.contact-cta__circle-arrow {
+    font-size: 1.4rem;
+    color: #efeae3;
+    align-self: flex-end;
+    line-height: 1;
+}
+
+.contact-cta__circle-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #efeae3;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+/* Column 3 — Info */
+.contact-cta__info {
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    position: relative;
+    z-index: 100;
+}
+
+.contact-cta__info-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-cta__info-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #000000;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.contact-cta__deck-btn {
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 18px;
+    border: 1px solid #000000;
+    border-radius: 999px;
+    color: #000000;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    /* 👈 fixes not clickable / pointer issue */
+    position: relative;
+    overflow: hidden;
+    /* 👈 needed for fill animation */
+    z-index: 10;
+    transition: color 0.3s ease;
+}
+
+/* Fill layer that slides up on hover */
+.contact-cta__deck-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #000000;
+    transform: translateY(100%);
+    /* starts hidden below */
+    transition: transform 0.3s ease;
+    z-index: -1;
+    border-radius: 999px;
+}
+
+.contact-cta__deck-btn:hover::before {
+    transform: translateY(0);
+    /* slides up to fill */
+}
+
+.contact-cta__deck-btn:hover {
+    color: #ffffff;
+}
+
+.contact-cta__address {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000000;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.contact-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-cta__cursor-circle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+    .contact-cta {
+        margin-top: 9vw;
+    }
+
+    .contact-cta__inner {
+        display: block;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    /* Hide circle and info columns on mobile */
+    .contact-cta__circle-wrap,
+    .contact-cta__info {
+        display: none;
+    }
+
+    /* Mobile: full-bleed dark card with background image */
+    .contact-cta__headline {
+        position: relative;
+        min-height: 520px;
+        background-image: url('/images/gradient.jpg');
+        /* swap in your image */
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 28px;
+        box-sizing: border-box;
+    }
+
+    /* .contact-cta__headline::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        /* background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 40%, rgba(0, 0, 0, 0.1) 100%);
+        border-radius: 0; */
+    /* }  */
+
+    .contact-cta__headline h2 {
+        position: relative;
+        color: #efeae3;
+        z-index: 1;
+        font-size: clamp(2.2rem, 9vw, 3rem);
+        margin-bottom: 12px;
+    }
+
+    /* Mobile subline — add this span inside the h2's parent div in HTML if needed */
+    .contact-cta__mobile-sub {
+        position: relative;
+        z-index: 1;
+        color: #efeae3;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+.space {
+    height: 6vw;
+    width: 100%;
+    /* background-color: yellow; */
+
+}

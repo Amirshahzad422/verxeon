@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CircleCursorInit from "@/components/CircleCursorInit";
@@ -125,7 +126,7 @@ export default function AboutPage() {
                             <div className="contact-cta__info">
                                 <div className="contact-cta__info-group">
                                     <p className="contact-cta__info-label">LET'S CONNECT:</p>
-                                    <a href="/#page3" className="contact-cta__deck-btn">CHECK OUR Services</a>
+                                    <Link href="/services" className="contact-cta__deck-btn">CHECK OUR Services</Link>
                                 </div>
                                 <div className="contact-cta__info-group">
                                     <p className="contact-cta__info-label">OUR FOCUS:</p>

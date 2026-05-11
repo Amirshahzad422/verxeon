@@ -28,7 +28,7 @@ export default function Footer() {
             <div id="footerupper">
                 <div className="footer-info">
                     <h2>
-                        <a href="#page3" style={linkStyle} onClick={(e) => smoothScrollTo("#page3", e)}>Services</a>
+                        <Link href="/services" style={linkStyle}>Services</Link>
                     </h2>
                     <h2>
                         <Link href="/about" style={linkStyle}>About</Link>

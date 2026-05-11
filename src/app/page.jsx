@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ElemContainer from "@/components/ElemContainer";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
@@ -14,13 +15,6 @@ const projectItems = [
         link: "/services/strategy",
     },
     {
-        id: "elem2",
-        title: "Design",
-        desc: "From wireframes to full design systems we craft interfaces that are beautiful, intuitive, and built to convert. UI/UX, branding, and visual identity done right.",
-        image: "/images/services/design.webp",
-        link: "/services/design",
-    },
-    {
         id: "elem3",
         title: "Engineering",
         desc: "Full-stack engineering across web, mobile, API, cloud, and DevOps. We build reliable, scalable systems that perform under pressure and grow with your business.",
@@ -35,32 +29,11 @@ const projectItems = [
         link: "/services/ai",
     },
     {
-        id: "elem5",
-        title: "Emerging Tech",
-        desc: "Stay ahead with AR/VR, IoT, Blockchain, and RPA solutions. We help businesses adopt the next wave of technology before their competitors even see it coming.",
-        image: "/images/services/emergingtech.webp",
-        link: "/services/emergingtech",
-    },
-    {
-        id: "elem6",
-        title: "Optimization",
-        desc: "We audit, test, and improve what you already have software audits, QA, ongoing maintenance, and compliance reviews that keep your systems healthy and risk-free.",
-        image: "/images/services/optimization.webp",
-        link: "/services/optimization",
-    },
-    {
         id: "elem7",
         title: "Growth",
         desc: "We drive measurable business growth through performance marketing, SEO, CRO, and branding strategies that attract the right customers and keep them coming back.",
         image: "/images/services/growth.webp",
         link: "/services/growth",
-    },
-    {
-        id: "elem8",
-        title: "Engagement",
-        desc: "Flexible hiring models built around you dedicated teams, staff augmentation, or an offshore development center. The right talent, exactly when you need it.",
-        image: "/images/services/engagement.webp",
-        link: "/services/engagement",
     },
 ];
 
@@ -185,7 +158,7 @@ export default function HomePage() {
                     <ElemContainer items={projectItems} />
                     <div id="but">
                         <div id="navbut">
-                            <h4><a href="#">VIEW ALL SERVICES -&gt;</a></h4>
+                            <h4><Link href="/services">VIEW ALL SERVICES -&gt;</Link></h4>
                         </div>
                     </div>
                 </div>
