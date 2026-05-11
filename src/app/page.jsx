@@ -6,6 +6,7 @@ import Nav from "@/components/Nav";
 import SwiperSection from "@/components/SwiperSection";
 import TabSection from "@/components/TabSection";
 
+
 const projectItems = [
     {
         id: "elem1",

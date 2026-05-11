@@ -5,6 +5,7 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CircleCursorInit from "@/components/CircleCursorInit";
+import Testimonials from "@/components/Testimonials";
 import "./main.css";
 const services = [
   {
@@ -64,11 +65,26 @@ export default function ServicePage() {
       <div id="main">
         <div id="page1">
           <Nav />
+          <section className="contact-hero">
+            <div className="contact-hero__left">
+              <span className="contact-hero__year">VerXeon</span>
+            </div>
+            <div className="contact-hero__right">
+              <h1 className="contact-hero__title">
+                We build systems that <br className="desktop-only" />
+                <span>scale businesses globally</span>
+              </h1>
+              <p className="contact-hero__subtitle">
+                We design and engineer automation-driven platforms and software infrastructure <br className="desktop-only" />
+                that help companies scale faster, operate efficiently, and grow without limits.
+              </p>
+            </div>
+          </section>
           <section className="whatwedo-section">
-            <div className="whatwedo-header">
+            {/* <div className="whatwedo-header">
               <h2>What We Deliver</h2>
               <p>We build AI-driven solutions, automation systems, and scalable digital products that transform business operations and accelerate growth.</p>
-            </div>
+            </div> */}
             <div className="whatwedo-body">
               <div className="whatwedo-list">
                 {services.map((service, i) => (
@@ -166,6 +182,7 @@ export default function ServicePage() {
 
             <div className="service-detail-divider"></div>
           </section>
+           <Testimonials />
           <section className="contact-cta">
             <Link href="/contact" className="contact-cta__cursor-circle" id="cta-cursor-circle">
               <span className="contact-cta__circle-arrow">
