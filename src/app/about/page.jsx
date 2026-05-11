@@ -147,24 +147,24 @@ export default function AboutPage() {
                                 {aboutContent.mission.rightText}
                             </p>
                             <div id="mission-cta">
-                                <a href="mailto:contact@verxeon.com" id="cta-talk-btn">{aboutContent.mission.ctaBtn}</a>
-                                <a href="mailto:contact@verxeon.com" id="cta-arrow-btn" aria-label="Contact us">
+                                <Link href="/contact" id="cta-talk-btn">{aboutContent.mission.ctaBtn}</Link>
+                                <Link href="/contact" id="cta-arrow-btn" aria-label="Contact us">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </section>
                     <section className="contact-cta">
-                        <div className="contact-cta__cursor-circle" id="cta-cursor-circle">
+                        <Link href="/contact" className="contact-cta__cursor-circle" id="cta-cursor-circle">
                             <span className="contact-cta__circle-arrow">
                                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                             </span>
                             <span className="contact-cta__circle-label">LET'S TALK</span>
-                        </div>
+                        </Link>
                         <div className="contact-cta__inner">
                             <div className="contact-cta__headline">
                                 <h2>Have a project in mind? Contact us!</h2>

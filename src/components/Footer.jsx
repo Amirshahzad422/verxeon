@@ -34,7 +34,7 @@ export default function Footer() {
                         <Link href="/about" style={linkStyle}>About</Link>
                     </h2>
                     <h2>
-                        <a href="#" style={linkStyle}>Contact</a>
+                        <Link href="/contact" style={linkStyle}>Contact</Link>
                     </h2>
                 </div>
                 <div id="email">

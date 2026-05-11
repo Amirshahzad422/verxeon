@@ -40,7 +40,7 @@ export default function Nav() {
                         <Link href="/about">About</Link>
                     </h4>
                     <h4>
-                        <a href="#">Contact</a>
+                        <Link href="/contact">Contact</Link>
                     </h4>
                 </div>
                 <h3 onClick={toggle}>Menu</h3>
@@ -49,7 +49,7 @@ export default function Nav() {
                 <div id="full-div1">
                     <h2><Link href="/services" onClick={toggle}>SERVICES</Link></h2>
                     <h2><Link href="/about" onClick={toggle}>ABOUT</Link></h2>
-                    <h2><a href="#" onClick={toggle}>CONTACT</a></h2>
+                    <h2><Link href="/contact" onClick={toggle}>CONTACT</Link></h2>
                 </div>
             </div>
         </>

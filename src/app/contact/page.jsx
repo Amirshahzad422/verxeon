@@ -5,22 +5,45 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CircleCursorInit from "@/components/CircleCursorInit";
+import { reviews } from "@/data/reviews";
 import "./page.css";
 
 export default function ContactPage() {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [reviewIndex, setReviewIndex] = useState(0);
+    const activeReview = reviews[reviewIndex];
+    const handlePrev = () => setReviewIndex((i) => (i - 1 + reviews.length) % reviews.length);
+    const handleNext = () => setReviewIndex((i) => (i + 1) % reviews.length);
     return (
         <>
             <div id="main">
                 <div id="page1">
                     <Nav />
+                    <section className="contact-hero">
+                        <div className="contact-hero__left">
+                            <span className="contact-hero__year">VerXeon</span>
+                        </div>
+
+                        <div className="contact-hero__right">
+                            <h1 className="contact-hero__title">
+                                We build systems that <br className="desktop-only" />
+                                <span>scale businesses globally</span>
+                            </h1>
+
+                            <p className="contact-hero__subtitle">
+                                We design and engineer automation-driven platforms and software infrastructure <br className="desktop-only" />
+                                that help companies scale faster, operate efficiently, and grow without limits.
+                            </p>
+                        </div>
+                    </section>
+
                     <section className="cv-section">
 
                         <div className="cv-header">
                             <p className="cv-eyebrow">Client Voices</p>
                             <h2 className="cv-title">
                                 What it&apos;s like working<br />
-                                    <span>with us</span>
+                                <span>with us</span>
                             </h2>
                         </div>
 
@@ -80,29 +103,25 @@ export default function ContactPage() {
                             <div className="cv-right">
                                 <p className="cv-quote">
                                     <span className="cv-quote-mark">&quot;</span>
-                                    I can&apos;t recommend Agencor enough! Their creative team took our branding to
-                                    the next level, and their strategic guidance was instrumental in our growth.
-                                    They&apos;re not just an agency; they&apos;re a true partner in success. Their
-                                    data-driven approach has consistently driven ROI for our marketing campaigns.
-                                    We trust them implicitly.
+                                    {activeReview.feedback}
                                 </p>
 
                                 <div className="cv-author-row">
                                     <div className="cv-author">
-                                        <div className="cv-author-avatar">DC</div>
+                                        <div className="cv-author-avatar">{activeReview.initials}</div>
                                         <div>
-                                            <div className="cv-author-name">Daniel Carter</div>
-                                            <div className="cv-author-title">CEO, Pixaflex</div>
+                                            <div className="cv-author-name">{activeReview.name}</div>
+                                            <div className="cv-author-title">{activeReview.title}, {activeReview.company}</div>
                                         </div>
                                     </div>
 
                                     <div className="cv-nav">
-                                        <button className="cv-nav-btn" aria-label="Previous" style={{ borderColor: "#111" }}>
-                                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ borderColor: "#111" }}>
+                                        <button className="cv-nav-btn" aria-label="Previous" onClick={handlePrev}>
+                                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M10 4L6 8l4 4" />
                                             </svg>
                                         </button>
-                                        <button className="cv-nav-btn" aria-label="Next" style={{ background: "#111", color: "#fff", borderColor: "#111" }}>
+                                        <button className="cv-nav-btn cv-nav-btn--active" aria-label="Next" onClick={handleNext}>
                                             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                                                 <path d="M6 4l4 4-4 4" />
                                             </svg>

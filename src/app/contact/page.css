@@ -3,11 +3,82 @@
     overflow: visible;
 }
 
+/* ===================== CONTACT HERO ===================== */
+.contact-hero {
+    display: grid;
+    grid-template-columns: 2.5fr 7.5fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 160px 24px 80px;
+    align-items: flex-start;
+    gap: 5vw;
+    /* background-color: red; */
+}
+
+.contact-hero__left {
+    padding-top: 16px;
+}
+
+.contact-hero__year {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    color: #888;
+}
+
+.contact-hero__title {
+    font-size: clamp(38px, 5vw, 66px);
+    font-weight: 300;
+    line-height: 1.05;
+    color: #111;
+    margin-bottom: 24px;
+    letter-spacing: -2px;
+}
+
+.contact-hero__title span {
+    color: #888;
+}
+
+.contact-hero__subtitle {
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 200;
+    color: #333;
+    line-height: 1.4;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        grid-template-columns: 1fr;
+        padding: 120px 24px 40px;
+        gap: 20px;
+    }
+    
+    .contact-hero__left {
+        padding-top: 0;
+    }
+
+    .contact-hero__title {
+        font-size: 52px;
+        line-height: 1.05;
+        margin-bottom: 24px;
+    }
+
+    .contact-hero__subtitle {
+        font-size: 18px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+}
+
 .cv-section {
     padding: 72px 24px 80px;
     background: #efeae3;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top:-3vw;
     /* background-color: yellow; */
   }
 
@@ -215,10 +286,11 @@
   .cv-right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 8px 8px 8px 24px;
+    justify-content: space-between;
+    padding: 40px 36px;
     background-color: #dcd0bd;
     border-radius: 16px;
+    min-height: 420px;
   }
 
   .cv-quote {
@@ -227,7 +299,8 @@
     line-height: 1.65;
     font-weight: 200;
     color: #222;
-    margin-bottom: 14vw;
+    flex: 1;
+    margin-bottom: 40px;
   }
 
   .cv-quote-mark {
@@ -302,42 +375,50 @@
     border-color: #111;
   }
 
+  .cv-nav-btn--active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+
   .cv-nav-btn svg {
     width: 16px;
     height: 16px;
   }
 
   /* ─── MOBILE ─── */
-  @media (max-width: 700px) {
+  @media (max-width: 960px) {
     .cv-section {
       padding: 48px 16px 56px;
     }
 
     .cv-body {
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 32px;
     }
 
     .cv-left {
       min-height: auto;
-      padding: 20px;
+      min-width: 100%;
+      padding: 24px;
     }
 
     .cv-right {
-      padding: 0;
+      padding: 32px 24px;
     }
 
     .cv-quote {
-      font-size: 17px;
-      margin-bottom: 28px;
+      font-size: 18px;
+      margin-bottom: 32px;
     }
 
     .cv-inner-card {
-      padding: 22px 18px 18px;
+      padding: 32px 24px;
+      gap: 24px;
     }
 
     .cv-rating-num {
-      font-size: 30px;
+      font-size: 36px;
     }
   }
 
@@ -654,6 +735,14 @@
   .contact-section__left,
   .contact-section__right {
     display: contents;
+  }
+
+  /* ensure every direct card child fills full width */
+  .manager-card,
+  .contact-form-card,
+  .work-card {
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* Manager Card — stacked on mobile */

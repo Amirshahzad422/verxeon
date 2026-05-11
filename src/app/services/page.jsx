@@ -167,7 +167,7 @@ export default function ServicePage() {
             <div className="service-detail-divider"></div>
           </section>
           <section className="contact-cta">
-            <div className="contact-cta__cursor-circle" id="cta-cursor-circle">
+            <Link href="/contact" className="contact-cta__cursor-circle" id="cta-cursor-circle">
               <span className="contact-cta__circle-arrow">
                 <svg
                   width="32"
@@ -186,7 +186,7 @@ export default function ServicePage() {
                 </svg>
               </span>
               <span className="contact-cta__circle-label">LET'S TALK</span>
-            </div>
+            </Link>
             <div className="contact-cta__inner">
               <div className="contact-cta__headline">
                 <h2>Have a project in mind? Contact us!</h2>
