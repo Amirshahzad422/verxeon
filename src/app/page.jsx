@@ -158,7 +158,26 @@ export default function HomePage() {
                     <ElemContainer items={projectItems} />
                     <div id="but">
                         <div id="navbut">
-                            <h4><Link href="/services">VIEW ALL SERVICES -&gt;</Link></h4>
+                            <h4>
+                                <Link href="/services" style={{ display: "inline-flex", alignItems: "center", gap: "4px" }}>
+                                    VIEW ALL SERVICES
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                    >
+                                        <path
+                                            d="M7 17L17 7M17 7H7M17 7V17"
+                                            stroke="currentColor"
+                                            strokeWidth="1.5"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                        />
+                                    </svg>
+                                </Link>
+                            </h4>
                         </div>
                     </div>
                 </div>

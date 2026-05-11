@@ -5,8 +5,64 @@ import CircleCursorInit from "@/components/CircleCursorInit";
 import "./page.css";
 
 export const metadata = {
-    title: "About — VerXeon Technologies",
+    title: "About VerXeon Technologies",
     description: "Learn about Verxeon, the technology partner for the world's most ambitious businesses.",
+};
+
+const aboutContent = {
+
+    hero: {
+        pill: "AI & Software Engineering",
+
+        headline: (
+            <>
+                Engineering the intelligence
+                <br />
+                that <em>drives tomorrow</em>
+            </>
+        ),
+
+        subheadline: (
+            <>
+                Verxeon Technologies is a next-generation{" "}
+                <strong>AI development company</strong> and{" "}
+                <strong>custom software agency</strong> building scalable,
+                intelligent systems for enterprises that refuse to stand still.
+                From AI automation solutions to full-scale digital transformation,
+                we engineer the infrastructure of what comes next.
+            </>
+        ),
+    },
+
+    page2Bottom: {
+        headline: "Where strategy meets engineering",
+
+        paragraph:
+            "We don't build software for the sake of it. Every line of code, every AI model, every automated workflow is engineered to create measurable business impact. Verxeon fuses deep technical expertise with commercial intelligence delivering custom software development that aligns precisely with your growth ambitions. We work where complexity lives, and we thrive there.",
+    },
+
+    page2BottomRight: {
+        headline: "AI-first. Not AI-added.",
+
+        paragraph:
+            "Artificial intelligence isn't a feature we bolt on it's the architecture we build from. From machine learning pipelines to autonomous AI agents and end-to-end AI automation solutions, our systems are designed to learn, adapt, and scale alongside your business. This is digital transformation done with precision and permanence. Not a pilot. Not a proof of concept. Production-ready intelligence, built to last.",
+    },
+
+    mission: {
+        leftHeading: "Our Mission",
+
+        leftText:
+            "We exist to make AI-powered software accessible, reliable, and genuinely transformative for forward-thinking organisations worldwide. Verxeon partners with enterprises and high-growth ventures to architect intelligent systems that don't just solve today's problems they anticipate tomorrow's. We believe that the future belongs to companies that operationalise intelligence at scale, and we are the engineering partner that makes that possible.",
+
+        rightHeadline: "Why Verxeon",
+
+        rightHeading: "Precision engineering for an intelligent era",
+
+        rightText:
+            "The gap between a company that adopts AI and one that truly harnesses it is enormous. Verxeon sits at that gap bridging vision with execution. As a leading software development agency and AI engineering firm, we operate at the intersection of enterprise-grade reliability and startup-speed agility. Our cross-functional teams of AI engineers, solution architects, and product strategists work as an extension of your organisation moving fast, thinking long, and building systems that compound in value over time. From initial discovery through to deployment and beyond, Verxeon is the digital transformation company your ambitions demand.",
+
+        ctaBtn: "Start a project with us",
+    },
 };
 
 export default function AboutPage() {
@@ -16,12 +72,12 @@ export default function AboutPage() {
                 <div id="page1">
                     <Nav />
                     <section id="about-hero">
-                        <div id="about-pill">About Company</div>
+                        <div id="about-pill">{aboutContent.hero.pill}</div>
                         <h1 id="about-headline">
-                            The future of business is<br/>being shaped by Verxeon
+                            {aboutContent.hero.headline}
                         </h1>
                         <p id="about-subheadline">
-                            Discover how Verxeon is revolutionizing the industry with innovative<br/>solutions and a commitment to excellence.
+                            {aboutContent.hero.subheadline}
                         </p>
                         <div id="about-video-container">
                             <video 
@@ -36,32 +92,30 @@ export default function AboutPage() {
                     </section>
                     <div id="page2-bottom">
                         <h1>
-                            Verxeon delivers intelligent software built to perform at the highest level.
+                            {aboutContent.page2Bottom.headline}
                         </h1>
                         <div id="bottom-part2">
                             <img
-                                src="/images/page2.jpg"
+                                src="/images/about/about1.webp"
                                 alt=""
                             />
                             <p>
-                                We don't just build software. We architect the competitive advantage that keeps our clients ahead through AI, automation,
-                                and technology that actually works at scale.
+                                {aboutContent.page2Bottom.paragraph}
                             </p>
                         </div>
                     </div>
                     <div id="gooey"></div>
                     <div id="page2-bottom-right">
                         <h1>
-                            Verxeon delivers intelligent software built to perform at the highest level.
+                            {aboutContent.page2BottomRight.headline}
                         </h1>
                         <div id="bottom-part2-left">
                             <img
-                                src="/images/page2.jpg"
+                                src="/images/about/about2.webp"
                                 alt=""
                             />
                             <p>
-                                We don't just build software. We architect the competitive advantage that keeps our clients ahead through AI, automation,
-                                and technology that actually works at scale.
+                                {aboutContent.page2BottomRight.paragraph}
                             </p>
                         </div>
                     </div>
@@ -69,37 +123,31 @@ export default function AboutPage() {
                         {/* Left Column */}
                         <div id="mission-left">
                             <img
-                                src="/images/services/design.webp"
+                                src="/images/about/about3.webp"
                                 alt="Team portrait"
                                 id="mission-portrait"
                             />
-                            <h3 id="mission-heading">Mission</h3>
+                            <h3 id="mission-heading">{aboutContent.mission.leftHeading}</h3>
                             <p id="mission-text">
-                                Our mission is to help businesses grow through intelligent design, reliable technology,
-                                and AI-driven solutions. We build digital products that are simple, scalable, and tailored
-                                to real user needs. Every project is guided by clarity, collaboration, and a commitment
-                                to deliver meaningful results.
+                                {aboutContent.mission.leftText}
                             </p>
                         </div>
                         {/* Right Column */}
                         <div id="mission-right">
                             <h2 id="mission-headline">
-                                We help to create strategies, design &amp; development.
+                                {aboutContent.mission.rightHeadline}
                             </h2>
                             <img
-                                src="/images/services/design.webp"
+                                src="/images/about/about4.webp"
                                 alt="Workspace"
                                 id="mission-workspace"
                             />
-                            <h3 id="value-heading">Value</h3>
+                            <h3 id="value-heading">{aboutContent.mission.rightHeading}</h3>
                             <p id="value-text">
-                                We operate with trust, commitment, and flexibility at the core of everything we do.
-                                We communicate openly, stay fully dedicated to our clients' success, and adapt quickly
-                                as their needs evolve. By combining strong ethics with deep technical expertise, we create
-                                digital experiences that inspire confidence and drive long-term impact.
+                                {aboutContent.mission.rightText}
                             </p>
                             <div id="mission-cta">
-                                <a href="mailto:contact@verxeon.com" id="cta-talk-btn">Let&apos;s Talk Growth</a>
+                                <a href="mailto:contact@verxeon.com" id="cta-talk-btn">{aboutContent.mission.ctaBtn}</a>
                                 <a href="mailto:contact@verxeon.com" id="cta-arrow-btn" aria-label="Contact us">
                                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
