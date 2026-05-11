@@ -3,6 +3,344 @@
     overflow: visible;
 }
 
+.cv-section {
+    padding: 72px 24px 80px;
+    background: #efeae3;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: yellow; */
+  }
+
+  .cv-header {
+    text-align: center;
+    /* margin-bottom: 6px; */
+  }
+
+  .cv-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 14px;
+  }
+
+  .cv-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 200;
+    line-height: 1.15;
+    color: #111;
+  }
+
+  .cv-title span {
+    color: #aaa;
+    font-weight: 100;
+  }
+
+  /* MAIN LAYOUT */
+  .cv-body {
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: stretch;
+    padding:5vw;
+    margin-top: -3vw;
+  }
+
+  /* LEFT: gradient card */
+  .cv-left {
+    border-radius: 24px;
+    background-image: url('/images/contact/gradient.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 590px;
+    min-width: 540px;
+    position: relative;
+  }
+
+  /* inner white card */
+  .cv-inner-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  .cv-rating-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+  }
+
+  .cv-rating-num {
+    font-size: 42px;
+    font-weight: 100;
+    color: #111;
+    line-height: 1;
+    letter-spacing: -1.5px;
+  }
+
+  .cv-rating-label {
+    font-size: 13px;
+    color: #888;
+    margin-top: 10px;
+    max-width: 120px;
+    line-height: 1.4;
+    font-weight:100;
+  }
+
+  .cv-bars {
+    display: flex;
+    gap: 1px;
+    align-items: flex-end;
+    margin-top: 8px;
+  }
+
+  .cv-bar {
+    width: 3px;
+    border-radius: 0px;
+    background: #ff5e14;
+  }
+
+  .cv-divider {
+    display: none;
+  }
+
+  .cv-avatars-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    /* background-color: green; */
+  }
+
+  .cv-avatars {
+    display: flex;
+    /* background-color: red; */
+
+  }
+
+  .cv-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-left: -12px;
+    object-fit: cover;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  .cv-avatar:first-child { margin-left: 0; }
+
+  .cv-avatar-you {
+    background: #111;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+
+  .cv-trusted {
+    font-size: 12px;
+    color: #111;
+    font-weight: 200;
+  }
+
+  .cv-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  .cv-brand {
+    font-size: 15px;
+    font-weight: 500;
+    color: #111;
+  }
+
+  .cv-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #111;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 8px 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .cv-btn-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cv-btn-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: #111;
+  }
+
+  /* RIGHT: testimonial */
+  .cv-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px 8px 8px 24px;
+    background-color: #dcd0bd;
+    border-radius: 16px;
+  }
+
+  .cv-quote {
+    /* background-color: red; */
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.65;
+    font-weight: 200;
+    color: #222;
+    margin-bottom: 14vw;
+  }
+
+  .cv-quote-mark {
+    font-size: 1.3em;
+    color: #999;
+    margin-right: 4px;
+    font-family: Georgia, serif;
+  }
+
+  .cv-author-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cv-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .cv-author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #c8b0a0;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .cv-author-name {
+    font-size: 16px;
+    font-weight: 200;
+    color: #111;
+    margin-bottom: 2px;
+  }
+
+  .cv-author-title {
+    font-size: 13px;
+    color: #888;
+    font-weight: 200;
+  }
+
+  .cv-nav {
+    display: flex;
+    gap: 10px;
+  }
+
+  .cv-nav-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #999;
+    transition: background 0.18s, color 0.18s;
+  }
+
+  .cv-nav-btn:hover {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+  }
+
+  .cv-nav-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 700px) {
+    .cv-section {
+      padding: 48px 16px 56px;
+    }
+
+    .cv-body {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .cv-left {
+      min-height: auto;
+      padding: 20px;
+    }
+
+    .cv-right {
+      padding: 0;
+    }
+
+    .cv-quote {
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .cv-inner-card {
+      padding: 22px 18px 18px;
+    }
+
+    .cv-rating-num {
+      font-size: 30px;
+    }
+  }
+
 /* ---- Layout ---- */
 .contact-section {
   background: #efeae3;
