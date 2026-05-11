@@ -1,0 +1,93 @@
+# VerXeon Technologies — robots.txt
+# AI-Optimized for Generative Engine Discoverability
+# Last Updated: 2026-05-12
+
+# ============================================
+# Standard Search Engine Crawlers
+# ============================================
+User-agent: *
+Allow: /
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /api/
+
+# ============================================
+# AI / LLM Crawlers — Explicitly Allowed
+# ============================================
+
+# OpenAI (ChatGPT, GPT-based products)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# OpenAI ChatGPT Plugins & Browse
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Microsoft Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Apple Intelligence / Applebot
+User-agent: Applebot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Common Crawl (feeds many AI training sets)
+User-agent: CCBot
+Allow: /
+
+# Amazon / Alexa
+User-agent: Amazonbot
+Allow: /
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+
+# Bytedance / AI Search
+User-agent: Bytespider
+Allow: /
+
+# ============================================
+# Sitemap & AI-Readable Files
+# ============================================
+Sitemap: https://verxeon.com/sitemap.xml
+
+# AI-Readable Structured Files
+# LLMs Summary: https://verxeon.com/llms.txt
+# LLMs Full Overview: https://verxeon.com/llms-full.txt
