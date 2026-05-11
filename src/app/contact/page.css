@@ -1,0 +1,432 @@
+
+#page1 {
+    overflow: visible;
+}
+
+/* ---- Layout ---- */
+.contact-section {
+  background: #efeae3;
+  padding: 4vw 6vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: start;
+}
+
+/* ---- Shared Card Base ---- */
+.contact-card {
+  background: #e2dbd0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ---- Manager Card ---- */
+.manager-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 24px;
+  align-items: flex-start;
+  animation: fadeSlideUp 0.6s ease both;
+}
+
+.manager-card__photo {
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.manager-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 320px;
+}
+
+.manager-card__title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #111;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.manager-card__desc {
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: #3a3939;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.manager-card__link {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111;
+  text-decoration: none;
+  border-bottom: 1.5px solid #111;
+  padding-bottom: 2px;
+  width: fit-content;
+  transition: opacity 0.2s;
+}
+
+.manager-card__link:hover {
+  opacity: 0.6;
+}
+
+/* ---- Work Card ---- */
+.work-card {
+  margin-top: 20px;
+  position: relative;
+  min-height: 340px;
+  background-image: url('/images/contact/gradient.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: fadeSlideUp 0.6s 0.15s ease both;
+}
+
+.work-card__text {
+  padding: 28px 28px 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.work-card__title {
+  color: #efeae3;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 0 0 8px;
+}
+
+.work-card__link {
+  color: #efeae3;
+  font-size: 1rem;
+  font-weight: 100;
+  text-decoration: none;
+  border-bottom: 1.5px solid rgba(255,255,255,0.7);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.work-card__link:hover {
+  opacity: 0.7;
+}
+
+.work-card__preview {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  width: 85%;
+  height: 230px;
+}
+
+/* ---- Work Preview Images ---- */
+.work-preview-img {
+  position: absolute;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.work-preview-img--back {
+  width: 70%;
+  height: 160px;
+  top: 0;
+  right: -10%;
+  transform: rotate(10deg);
+  z-index: 1;
+}
+
+.work-preview-img--mid {
+  width: 80%;
+  height: 180px;
+  top: 20px;
+  right: 10%;
+  transform: rotate(-10deg);
+  z-index: 2;
+}
+
+.work-preview-img--front {
+  width: 90%;
+  height: 200px;
+  bottom: -20px;
+  left: -10%;
+  transform: rotate(-4deg);
+  z-index: 3;
+}
+
+/* ---- Right Column: Contact Form ---- */
+.contact-section__right {
+  animation: fadeSlideUp 0.6s 0.1s ease both;
+}
+
+.contact-form-card {
+  background: #dcd0bd;
+  border-radius: 16px;
+  padding: 40px 36px 32px;
+}
+
+.contact-form-card__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 32px;
+  letter-spacing: -0.5px;
+}
+
+/* ---- Form Fields ---- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field {
+  position: relative;
+  padding: 12px 0 0;
+  margin-bottom: 16px;
+}
+
+.form-field__input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  font-weight: 200;
+  color: #111;
+  padding: 8px 0 10px;
+  box-sizing: border-box;
+}
+
+.form-field__input::placeholder {
+  color: #6f6e6e;
+}
+
+.form-field__line {
+  height: 1px;
+  background: #6f6e6e;
+  width: 100%;
+  transition: background 0.25s;
+}
+
+.form-field:focus-within .form-field__line {
+  background: #6f6e6e;
+}
+
+.form-field--textarea .form-field__input {
+  resize: vertical;
+  min-height: 90px;
+  font-family: inherit;
+}
+
+/* ---- Submit Button ---- */
+.submit-btn {
+  display: block;
+  width: 100%;
+  background: #111;
+  color: #efeae3;
+  border: none;
+  border-radius: 50px;
+  padding: 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background 0.2s, transform 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.submit-btn:hover {
+  background: #333;
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* ---- Legal Text ---- */
+.form-legal {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+  margin: 12px 0 0;
+  line-height: 1.5;
+}
+
+.form-legal a {
+  color: #555;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-legal a:hover {
+  color: #111;
+}
+
+
+/* ===================== ANIMATIONS / KEYFRAMES ===================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===================== MOBILE RESPONSIVE CSS ===================== */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 32px 16px;
+    align-items: flex-start;
+    gap:2vw;
+  }
+
+  .contact-section__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    /* background-color: red; */
+  }
+
+  .contact-section__left,
+  .contact-section__right {
+    display: contents;
+  }
+
+  /* Manager Card — stacked on mobile */
+  .manager-card {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    animation: mobileCardIn 0.5s ease both;
+  }
+
+  .manager-card__photo {
+    width: 100%;
+    height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .manager-card__title {
+    font-size: 1.15rem;
+  }
+
+  /* Work Card — taller on mobile */
+  .work-card {
+    order: 3;
+    min-height: 300px;
+    margin-top: 0;
+    width: 100%;
+    animation: mobileCardIn 0.5s 0.2s ease both;
+  }
+
+  .work-card__title {
+    font-size: 1.25rem;
+  }
+
+  .work-card__preview {
+    width: 92%;
+    height: 200px;
+    bottom: -10px;
+    right: -5px;
+  }
+
+  .work-preview-img--back {
+    width: 65%;
+    height: 120px;
+  }
+
+  .work-preview-img--mid {
+    width: 75%;
+    height: 140px;
+  }
+
+  .work-preview-img--front {
+    width: 85%;
+    height: 160px;
+  }
+
+  /* Contact Form Card on mobile */
+  .contact-form-card {
+    order: 2;
+    padding: 28px 20px 24px;
+    animation: mobileCardIn 0.5s 0.1s ease both;
+  }
+
+  .contact-form-card__title {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+
+  .submit-btn {
+    padding: 16px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  .form-legal {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-section {
+    padding: 24px 12px;
+  }
+
+  .manager-card__photo {
+    height: 220px;
+  }
+
+  .contact-form-card__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---- Mobile Keyframe ---- */
+@keyframes mobileCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.space {
+    height: 6vw;
+    width: 100%;
+    /* background-color: yellow; */
+
+}
