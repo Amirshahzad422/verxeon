@@ -4,10 +4,10 @@ export const metadata = {
   openGraph: {
     title: "Services | Verxeon",
     description: "AI & software services designed to help your business scale — from strategy and design to engineering and growth.",
-    url: "https://verxeon.com/services",
+    url: "https://verxeon.vercel.app/services",
     images: [
       {
-        url: "https://verxeon.com/og/og-services.png",
+        url: "/og/og-services.png",
         width: 1200,
         height: 630,
         alt: "Verxeon Services",
@@ -18,10 +18,10 @@ export const metadata = {
     card: "summary_large_image",
     title: "Services | Verxeon",
     description: "AI & software services designed to help your business scale — from strategy and design to engineering and growth.",
-    images: ["https://verxeon.com/og/og-services.png"],
+    images: ["/og/og-services.png"],
   },
   alternates: {
-    canonical: "https://verxeon.com/services",
+    canonical: "https://verxeon.vercel.app/services",
   },
 };
 

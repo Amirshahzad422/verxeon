@@ -4,10 +4,10 @@ export const metadata = {
     openGraph: {
         title: "Contact Verxeon",
         description: "Have a project in mind? Let's build something intelligent together.",
-        url: "https://verxeon.com/contact",
+        url: "https://verxeon.vercel.app/contact",
         images: [
             {
-                url: "https://verxeon.com/og/og-contact.png",
+                url: "/og/og-contact.png",
                 width: 1200,
                 height: 630,
                 alt: "Contact Verxeon",
@@ -18,10 +18,10 @@ export const metadata = {
         card: "summary_large_image",
         title: "Contact Verxeon",
         description: "Have a project in mind? Let's build something intelligent together.",
-        images: ["https://verxeon.com/og/og-contact.png"],
+        images: ["/og/og-contact.png"],
     },
     alternates: {
-        canonical: "https://verxeon.com/contact",
+        canonical: "https://verxeon.vercel.app/contact",
     },
 };
 

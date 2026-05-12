@@ -12,18 +12,19 @@ export const metadata = {
   authors: [{ name: "Verxeon" }],
   creator: "Verxeon",
   publisher: "Verxeon",
-  metadataBase: new URL("https://verxeon.com"),
+  // TODO: Switch to https://verxeon.com when custom domain is live
+  metadataBase: new URL("https://verxeon.vercel.app"),
   alternates: {
     canonical: "https://verxeon.com",
   },
   openGraph: {
     title: "Verxeon | Software That Thinks",
     description: "AI & Software Solutions for Forward-Thinking Businesses",
-    url: "https://verxeon.com",
+    url: "https://verxeon.vercel.app",
     siteName: "Verxeon",
     images: [
       {
-        url: "https://verxeon.com/og/og-home.png",
+        url: "/og/og-home.png",
         width: 1200,
         height: 630,
         alt: "Verxeon — Software That Thinks",
@@ -36,7 +37,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Verxeon | Software That Thinks",
     description: "AI & Software Solutions for Forward-Thinking Businesses",
-    images: ["https://verxeon.com/og/og-home.png"],
+    images: ["/og/og-home.png"],
   },
   robots: {
     index: true,
