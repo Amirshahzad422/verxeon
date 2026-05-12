@@ -2,6 +2,10 @@
   "name": "verxeon",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Amirshahzad422/verxeon.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
