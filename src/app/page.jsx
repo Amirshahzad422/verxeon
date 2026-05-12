@@ -6,6 +6,32 @@ import Nav from "@/components/Nav";
 import SwiperSection from "@/components/SwiperSection";
 import TabSection from "@/components/TabSection";
 
+export const metadata = {
+    title: "Verxeon | Software That Thinks",
+    description: "AI & Software Solutions for Forward-Thinking Businesses. We build intelligent systems, automation platforms, and scalable digital products.",
+    openGraph: {
+        title: "Verxeon | Software That Thinks",
+        description: "AI & Software Solutions for Forward-Thinking Businesses",
+        url: "https://verxeon.com",
+        images: [
+            {
+                url: "https://verxeon.com/og/og-home.png",
+                width: 1200,
+                height: 630,
+                alt: "Verxeon — Software That Thinks",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Verxeon | Software That Thinks",
+        description: "AI & Software Solutions for Forward-Thinking Businesses",
+        images: ["https://verxeon.com/og/og-home.png"],
+    },
+    alternates: {
+        canonical: "https://verxeon.com",
+    },
+};
 
 const projectItems = [
     {

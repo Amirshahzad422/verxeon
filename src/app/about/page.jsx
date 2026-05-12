@@ -5,8 +5,30 @@ import CircleCursorInit from "@/components/CircleCursorInit";
 import "./page.css";
 
 export const metadata = {
-    title: "About VerXeon Technologies",
-    description: "Learn about Verxeon, the technology partner for the world's most ambitious businesses.",
+    title: "About Verxeon",
+    description: "Learn about Verxeon — the AI & software engineering partner for the world's most ambitious businesses.",
+    openGraph: {
+        title: "About Verxeon",
+        description: "Engineering the intelligence that drives tomorrow. AI-first software development for forward-thinking businesses.",
+        url: "https://verxeon.com/about",
+        images: [
+            {
+                url: "https://verxeon.com/og/og-about.png",
+                width: 1200,
+                height: 630,
+                alt: "About Verxeon",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Verxeon",
+        description: "Engineering the intelligence that drives tomorrow. AI-first software development for forward-thinking businesses.",
+        images: ["https://verxeon.com/og/og-about.png"],
+    },
+    alternates: {
+        canonical: "https://verxeon.com/about",
+    },
 };
 
 const aboutContent = {

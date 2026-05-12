@@ -3,28 +3,40 @@ import CustomScrollbar from "@/components/CustomScrollbar";
 import SmoothScrollProvider from "@/providers/SmoothScrollProvider";
 
 export const metadata = {
-  title: "VerXeon Technologies | AI-Powered Software Development Agency",
-  description: "VerXeon Technologies is an AI-powered software development agency based in Dubai, UAE. We build intelligent systems, AI automation solutions, custom software, and scalable digital products for enterprises worldwide.",
+  title: {
+    default: "Verxeon | Software That Thinks",
+    template: "%s | Verxeon",
+  },
+  description: "AI & Software Solutions for Forward-Thinking Businesses",
   keywords: "AI development company, custom software agency, AI automation solutions, machine learning engineering, digital transformation, software development Dubai, AI agents, MLOps, RAG pipelines, enterprise software",
-  authors: [{ name: "VerXeon Technologies" }],
-  creator: "VerXeon Technologies",
-  publisher: "VerXeon Technologies",
+  authors: [{ name: "Verxeon" }],
+  creator: "Verxeon",
+  publisher: "Verxeon",
   metadataBase: new URL("https://verxeon.com"),
   alternates: {
     canonical: "https://verxeon.com",
   },
   openGraph: {
-    title: "VerXeon Technologies | AI-Powered Software Development Agency",
-    description: "We build intelligent systems, AI automation solutions, and scalable software for enterprises worldwide.",
+    title: "Verxeon | Software That Thinks",
+    description: "AI & Software Solutions for Forward-Thinking Businesses",
     url: "https://verxeon.com",
-    siteName: "VerXeon Technologies",
+    siteName: "Verxeon",
+    images: [
+      {
+        url: "https://verxeon.com/og/og-home.png",
+        width: 1200,
+        height: 630,
+        alt: "Verxeon — Software That Thinks",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VerXeon Technologies | Software That Thinks",
-    description: "AI-powered software development agency building intelligent systems for enterprises. Dubai, UAE.",
+    title: "Verxeon | Software That Thinks",
+    description: "AI & Software Solutions for Forward-Thinking Businesses",
+    images: ["https://verxeon.com/og/og-home.png"],
   },
   robots: {
     index: true,
