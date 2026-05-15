@@ -8,7 +8,7 @@ export default function SmoothScrollProvider({ children }) {
         let lenis = null;
 
         const initLenis = async () => {
-            const Lenis = (await import("@studio-freight/lenis")).default;
+            const Lenis = (await import("lenis")).default;
             lenis = new Lenis({
                 lerp: 0.07,
                 smooth: true,
