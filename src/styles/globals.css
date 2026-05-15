@@ -595,6 +595,18 @@ nav h3 {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+/* Blobs must not block clicks on Services / About / Contact */
+#footer #shape1,
+#footer #shape2 {
+    pointer-events: none;
+}
+
+#footerupper a {
+    position: relative;
+    z-index: 4;
+    pointer-events: auto;
+}
 .social-link {
     display: inline-flex;
     align-items: center;

@@ -7,18 +7,6 @@ const linkStyle = {
     cursor: "pointer",
 };
 
-function smoothScrollTo(href, e) {
-    if (!href || href === "#") return;
-    e.preventDefault();
-    const target = document.querySelector(href);
-    if (!target) return;
-    if (window.lenis) {
-        window.lenis.scrollTo(target, { duration: 1.4, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-    } else {
-        target.scrollIntoView({ behavior: "smooth" });
-    }
-}
-
 export default function Footer() {
     return (
         <div id="footer">
