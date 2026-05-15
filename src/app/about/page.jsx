@@ -10,7 +10,7 @@ export const metadata = {
     openGraph: {
         title: "About Verxeon",
         description: "Engineering the intelligence that drives tomorrow. AI-first software development for forward-thinking businesses.",
-        url: "https://verxeon.vercel.app/about",
+        url: "https://verxeon.com/about",
         images: [
             {
                 url: "/og/og-about.png",

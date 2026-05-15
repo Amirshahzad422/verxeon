@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: "Services | Verxeon",
     description: "AI & software services designed to help your business scale — from strategy and design to engineering and growth.",
-    url: "https://verxeon.vercel.app/services",
+    url: "https://verxeon.com/services",
     images: [
       {
         url: "/og/og-services.png",
@@ -24,7 +24,7 @@ export const metadata = {
     images: ["/og/og-services.png"],
   },
   alternates: {
-    canonical: "https://verxeon.vercel.app/services",
+    canonical: "https://verxeon.com/services",
   },
 };
 

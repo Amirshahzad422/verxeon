@@ -12,15 +12,14 @@ export const metadata = {
   authors: [{ name: "Verxeon" }],
   creator: "Verxeon",
   publisher: "Verxeon",
-  // TODO: Switch to https://verxeon.com when custom domain is live
-  metadataBase: new URL("https://verxeon.vercel.app"),
+  metadataBase: new URL("https://verxeon.com"),
   alternates: {
     canonical: "https://verxeon.com",
   },
   openGraph: {
     title: "Verxeon | Software That Thinks",
     description: "AI & Software Solutions for Forward-Thinking Businesses",
-    url: "https://verxeon.vercel.app",
+    url: "https://verxeon.com",
     siteName: "Verxeon",
     images: [
       {
