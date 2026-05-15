@@ -2,7 +2,6 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ServicePageTemplate from "@/components/ServicePageTemplate";
 import { servicesPages } from "@/data/servicesData";
-import "../page.css";
 
 export default function EngagementPage() {
     return (

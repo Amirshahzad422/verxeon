@@ -6,7 +6,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import CircleCursorInit from "@/components/CircleCursorInit";
 import Testimonials from "@/components/Testimonials";
-import "./main.css";
+
 const services = [
   {
     title: "Strategy",

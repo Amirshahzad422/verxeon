@@ -8,6 +8,7 @@ export default function SmoothScrollProvider({ children }) {
         let lenis = null;
 
         const initLenis = async () => {
+            try {
             const Lenis = (await import("lenis")).default;
             lenis = new Lenis({
                 lerp: 0.07,
@@ -37,6 +38,9 @@ export default function SmoothScrollProvider({ children }) {
             };
 
             rafId = window.requestAnimationFrame(raf);
+            } catch (error) {
+                console.warn("Lenis smooth scroll disabled:", error);
+            }
         };
 
         initLenis();

@@ -102,12 +102,13 @@ export default function AboutPage() {
                             {aboutContent.hero.subheadline}
                         </p>
                         <div id="about-video-container">
-                            <video 
-                                src="/videos/about.mp4" 
-                                autoPlay 
-                                loop 
-                                muted 
+                            <video
+                                src="/videos/about.mp4"
+                                autoPlay
+                                loop
+                                muted
                                 playsInline
+                                preload="metadata"
                             ></video>
                         </div>
                         <div id="about-gooey"></div>

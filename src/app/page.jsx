@@ -122,7 +122,7 @@ export default function HomePage() {
                         <div id="hero-2"></div>
                         <div id="hero-3"></div>
                     </div>
-                    <video autoPlay loop muted src="/videos/video2.mp4"></video>
+                    <video autoPlay loop muted playsInline preload="metadata" src="/videos/video2.mp4"></video>
                 </div>
                 <div id="page2">
                     <div id="moving-text">

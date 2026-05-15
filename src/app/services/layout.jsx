@@ -1,3 +1,6 @@
+import "./main.css";
+import "./page.css";
+
 export const metadata = {
   title: "Services",
   description: "Explore Verxeon's full service catalog — Strategy, Design, Engineering, AI & Data, Emerging Tech, Optimization, Growth, and Engagement.",
